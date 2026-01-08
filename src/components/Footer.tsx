@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-surface-dark border-t border-border">
+    <footer className="bg-surface-dark border-t border-white/10 text-white">
       {/* CTA Section */}
       <div className="container py-16">
         <div className="text-center space-y-8">
@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Info */}
-      <div className="border-t border-border">
+      <div className="border-t border-white/10">
         <div className="container py-12">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Company Info */}
@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-border">
+      <div className="border-t border-white/10">
         <div className="container py-6">
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Peterborough Emergency Plumbers. All rights reserved.
