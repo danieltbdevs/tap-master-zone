@@ -102,9 +102,10 @@ const HeroSection = () => {
                 className="w-full h-full object-cover object-top lg:object-center"
               />
               {/* Gradient fade into background */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0B0C10]/30 lg:to-[#0B0C10]/70" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/80 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0B0C10]/20 via-transparent to-transparent lg:from-[#0B0C10]/30" />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0B0C10]/20 to-[#0B0C10]/50 lg:to-[#0B0C10]/90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-[#0B0C10]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0B0C10]/40 via-transparent to-transparent lg:from-[#0B0C10]/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0B0C10]/30" />
             </div>
           </div>
         </div>
