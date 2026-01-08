@@ -1,12 +1,4 @@
 import { Star } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -20,18 +12,6 @@ const testimonials = [
   {
     name: "Alan D",
     text: "We had a major plumbing issue at our factory, and these guys were fantastic. Their team is skilled and got everything running smoothly again in no time. Top-notch industrial plumbing service.",
-  },
-  {
-    name: "Sarah T",
-    text: "Called them at midnight for an emergency burst pipe. They arrived within 30 minutes and saved us from serious water damage. Absolutely lifesavers! Will always recommend their 24/7 service.",
-  },
-  {
-    name: "Marcus W",
-    text: "Professional from start to finish. They gave an honest quote, showed up on time, and completed the bathroom renovation plumbing perfectly. No hidden fees, no surprises. Great experience!",
-  },
-  {
-    name: "Jennifer L",
-    text: "Had them install a new water heater and they were brilliant. Explained everything clearly, cleaned up after themselves, and the price was fair. Highly recommend for any plumbing work.",
   },
 ];
 
@@ -49,45 +29,27 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 4000,
-              stopOnInteraction: true,
-            }),
-          ]}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-4">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="bg-white rounded-xl p-6 shadow-md h-full space-y-4">
-                  {/* Stars */}
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  
-                  {/* Name */}
-                  <h3 className="text-xl font-bold text-foreground">{testimonial.name}</h3>
-                  
-                  {/* Testimonial Text */}
-                  <p className="text-muted-foreground leading-relaxed">
-                    {testimonial.text}
-                  </p>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="-left-4 md:-left-12 bg-white border-gray-200 hover:bg-gray-50" />
-          <CarouselNext className="-right-4 md:-right-12 bg-white border-gray-200 hover:bg-gray-50" />
-        </Carousel>
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="text-center space-y-4">
+              {/* Stars */}
+              <div className="flex justify-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              
+              {/* Name */}
+              <h3 className="text-xl font-bold text-foreground">{testimonial.name}</h3>
+              
+              {/* Testimonial Text */}
+              <p className="text-muted-foreground leading-relaxed">
+                {testimonial.text}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
