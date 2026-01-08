@@ -8,7 +8,6 @@ import ServiceAreaSection from "@/components/ServiceAreaSection";
 import FAQSection from "@/components/FAQSection";
 import CallbackFormSection from "@/components/CallbackFormSection";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 const Index = () => {
   return (
@@ -23,10 +22,6 @@ const Index = () => {
       <FAQSection />
       <CallbackFormSection />
       <Footer />
-      <StickyMobileCTA />
-      
-      {/* Extra padding for sticky mobile CTA */}
-      <div className="h-24 lg:hidden" />
     </div>
   );
 };
