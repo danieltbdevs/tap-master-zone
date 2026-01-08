@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm">
       <div className="container px-4 sm:px-6">
-        <div className="flex items-center justify-between h-[80px] sm:h-[100px] lg:h-[130px]">
+        <div className="flex items-center justify-between h-[60px] sm:h-[70px] lg:h-[80px]">
           {/* Logo */}
           <a href="#" onClick={scrollToTop} className="flex-shrink-0 relative group cursor-pointer">
             {/* Glow effect */}
@@ -40,7 +40,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Peterborough Emergency Plumbers" 
-              className="relative w-[180px] h-[92px] sm:w-[240px] sm:h-[123px] lg:w-[320px] lg:h-[164px] object-contain"
+              className="relative w-[120px] h-auto sm:w-[150px] lg:w-[180px] object-contain"
             />
           </a>
 
