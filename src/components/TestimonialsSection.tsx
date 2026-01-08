@@ -1,4 +1,11 @@
 import { Star } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -29,27 +36,39 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="text-center space-y-4">
-              {/* Stars */}
-              <div className="flex justify-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              
-              {/* Name */}
-              <h3 className="text-xl font-bold text-foreground">{testimonial.name}</h3>
-              
-              {/* Testimonial Text */}
-              <p className="text-muted-foreground leading-relaxed">
-                {testimonial.text}
-              </p>
-            </div>
-          ))}
-        </div>
+        {/* Testimonials Carousel */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="bg-white rounded-xl p-6 shadow-md h-full space-y-4">
+                  {/* Stars */}
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  
+                  {/* Name */}
+                  <h3 className="text-xl font-bold text-foreground">{testimonial.name}</h3>
+                  
+                  {/* Testimonial Text */}
+                  <p className="text-muted-foreground leading-relaxed">
+                    {testimonial.text}
+                  </p>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-4 md:-left-12 bg-white border-gray-200 hover:bg-gray-50" />
+          <CarouselNext className="-right-4 md:-right-12 bg-white border-gray-200 hover:bg-gray-50" />
+        </Carousel>
       </div>
     </section>
   );
