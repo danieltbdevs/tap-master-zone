@@ -58,6 +58,38 @@ const ServiceAreaSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Map Section */}
+        <div className="mt-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide">
+              Emergency Plumber Peterborough
+            </h3>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77766.98663990066!2d-0.3047699!3d52.5695235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877f055400b0de5%3A0x9c99c869d3e6823!2sPeterborough%2C%20UK!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Peterborough Service Area Map"
+              className="w-full"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <a 
+              href="https://www.google.com/maps/place/Peterborough,+UK" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline text-sm font-medium"
+            >
+              View larger map
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
