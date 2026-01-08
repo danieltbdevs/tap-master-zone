@@ -2,7 +2,14 @@ import { Phone, MessageCircle, Star, Shield, Clock, BadgeCheck } from "lucide-re
 import { Button } from "@/components/ui/button";
 import plumberHero from "@/assets/plumber-hero-dramatic.webp";
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+  return <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/50">
+      
+      {/* Subtle grid pattern overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      
+      {/* Radial gradient accent */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-emergency-red/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
       
       <div className="container relative z-10 py-8 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:min-h-screen lg:py-20">
