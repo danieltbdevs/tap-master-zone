@@ -35,7 +35,7 @@ const ServiceAreaSection = () => {
               </p>
               
               <div className="flex justify-center lg:justify-start">
-                <Button variant="emergency" size="default" className="sm:size-lg text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3" asChild>
+                <Button variant="emergency" size="lg" className="px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base" asChild>
                   <a href="tel:+441234567890">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                     Check if We Cover Your Area
