@@ -38,7 +38,11 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <img src={logo} alt="Peterborough Emergency Plumbers" className="h-10 w-auto" />
+              <img 
+                src={logo} 
+                alt="Peterborough Emergency Plumbers" 
+                className="h-12 w-auto drop-shadow-[0_0_8px_rgba(239,68,68,0.3)]" 
+              />
               <p className="text-muted-foreground">
                 Fast, reliable emergency plumbing services across Peterborough and surrounding areas. Available 24/7.
               </p>

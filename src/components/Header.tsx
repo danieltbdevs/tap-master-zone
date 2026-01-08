@@ -20,11 +20,13 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0">
+          <a href="#" className="flex-shrink-0 relative group">
+            {/* Glow effect */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-emergency-red/20 via-blue-500/20 to-emergency-red/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <img 
               src={logo} 
               alt="Peterborough Emergency Plumbers" 
-              className="h-10 lg:h-12 w-auto"
+              className="relative h-12 lg:h-14 w-auto drop-shadow-[0_0_8px_rgba(239,68,68,0.3)]"
             />
           </a>
 
