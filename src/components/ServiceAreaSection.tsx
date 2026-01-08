@@ -50,7 +50,7 @@ const ServiceAreaSection = () => {
                     key={index}
                     className="flex items-center gap-2 bg-secondary/50 rounded-lg px-4 py-3"
                   >
-                    <MapPin className="w-4 h-4 text-white flex-shrink-0" />
+                    <MapPin className="w-4 h-4 text-emergency-red flex-shrink-0" />
                     <span className="text-sm">{area}</span>
                   </div>
                 ))}
