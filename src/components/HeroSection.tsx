@@ -19,7 +19,7 @@ const HeroSection = () => {
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
-                  <span className="text-white font-semibold text-sm ml-1">4.9/5</span>
+                  <span className="text-foreground font-semibold text-sm ml-1">4.9/5</span>
                 </div>
                 <span className="text-sm text-muted-foreground">200+ local reviews</span>
               </div>
@@ -80,10 +80,18 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Image */}
-        
+          {/* Right Image */}
+          <div className="relative hidden lg:block">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={plumberHero} 
+                alt="Professional plumber at work" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   </section>;
 };
 export default HeroSection;
