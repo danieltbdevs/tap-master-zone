@@ -26,7 +26,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Peterborough Emergency Plumbers" 
-              className="relative h-12 lg:h-14 w-auto drop-shadow-[0_0_8px_rgba(239,68,68,0.3)]"
+              className="relative w-[254px] h-[130px] object-contain"
             />
           </a>
 
