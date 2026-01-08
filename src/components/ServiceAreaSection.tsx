@@ -30,7 +30,7 @@ const ServiceAreaSection = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                 Serving Peterborough & Surrounding Areas
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-gray-200">
                 We cover all of Peterborough and surrounding villages. Not sure if we cover your area? Just call – we'll confirm instantly.
               </p>
               
@@ -44,14 +44,14 @@ const ServiceAreaSection = () => {
 
             {/* Areas List */}
             <div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {areas.map((area, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-1.5 sm:gap-2 bg-secondary/50 rounded-lg px-3 sm:px-4 py-2 sm:py-3"
+                    className="flex items-center gap-2 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3"
                   >
-                    <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emergency-red flex-shrink-0" />
-                    <span className="text-xs sm:text-sm">{area}</span>
+                    <MapPin className="w-4 h-4 text-emergency-red flex-shrink-0" />
+                    <span className="text-xs sm:text-sm text-white font-medium">{area}</span>
                   </div>
                 ))}
               </div>
