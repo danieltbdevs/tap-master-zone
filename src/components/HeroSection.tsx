@@ -1,13 +1,25 @@
 import { Phone, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import plumberHero from "@/assets/plumber-hero.webp";
+import plumberHero from "@/assets/plumber-hero-new.png";
+
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0f0f15] to-[#0a0a0f]" />
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
+      {/* Background Image - Full width with gradient overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={plumberHero} 
+          alt="Professional emergency plumber fixing a burst pipe" 
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Left dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/90 to-transparent" />
+        {/* Additional top/bottom gradients for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/50 via-transparent to-[#0a0a0f]/30" />
+      </div>
       
       <div className="container relative z-10 py-16 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="max-w-2xl">
           {/* Content - Left Side */}
           <div className="space-y-8 fade-in">
             {/* Badge */}
@@ -23,7 +35,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-gray-400 max-w-xl">
+            <p className="text-lg md:text-xl text-gray-300 max-w-xl">
               Fast, trusted, local emergency plumbing – we're on our way in minutes. No call-out fees, transparent pricing.
             </p>
 
@@ -54,19 +66,19 @@ const HeroSection = () => {
 
             {/* Trust Badges */}
             <div className="flex flex-wrap gap-6 pt-4">
-              <div className="flex items-center gap-2 text-sm text-gray-400">
+              <div className="flex items-center gap-2 text-sm text-gray-300">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="text-xs font-bold text-white">GS</span>
                 </div>
                 Gas Safe Registered
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
+              <div className="flex items-center gap-2 text-sm text-gray-300">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="text-xs text-white">✓</span>
                 </div>
                 Fully Insured
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
+              <div className="flex items-center gap-2 text-sm text-gray-300">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="text-xs text-white">£</span>
                 </div>
@@ -74,23 +86,10 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Image - Right Side */}
-          <div className="relative hidden lg:block">
-            <div className="relative z-10">
-              {/* Glow effect behind image */}
-              <div className="absolute -inset-8 bg-gradient-to-tr from-emergency-red/30 via-emergency-red/10 to-transparent rounded-3xl blur-3xl" />
-              <img src={plumberHero} alt="Professional emergency plumber fixing a burst pipe" className="relative w-full max-w-2xl mx-auto rounded-2xl object-cover shadow-2xl shadow-emergency-red/20" />
-            </div>
-            
-            {/* Floating Badge - Top Right */}
-            
-
-            {/* Floating Badge - Bottom Left */}
-            
-          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
