@@ -15,10 +15,17 @@ const navLinks = [
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
+      const isNearBottom = scrollTop + clientHeight >= scrollHeight - 100;
+
+      setIsScrolled(scrollTop > 50);
+      setIsHidden(isNearBottom);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,7 +33,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200 shadow-sm transition-all duration-300 ${isScrolled ? 'py-0' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200 shadow-sm transition-all duration-300 ${isScrolled ? 'py-0' : ''} ${isHidden ? 'opacity-0 -translate-y-full pointer-events-none' : 'opacity-100 translate-y-0'}`}>
       <div className="container px-4 sm:px-6">
         <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-[60px] sm:h-[70px] lg:h-[80px]' : 'h-[80px] sm:h-[100px] lg:h-[130px]'}`}>
           {/* Logo */}
