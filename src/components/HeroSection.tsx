@@ -1,7 +1,20 @@
 import { Phone, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import plumberHero from "@/assets/plumber-hero.webp";
+import { useEffect, useState } from "react";
+
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scale from 1 to 1.5 over the first 500px of scroll
+  const scale = 1 + Math.min(scrollY / 500, 0.5);
+
   return <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0f0f15] to-[#0a0a0f]" />
@@ -77,7 +90,10 @@ const HeroSection = () => {
 
           {/* Image - Right Side */}
           <div className="relative hidden lg:block">
-            <div className="relative z-10">
+            <div 
+              className="relative z-10 transition-transform duration-300 ease-out origin-center"
+              style={{ transform: `scale(${scale})` }}
+            >
               {/* Glow effect behind image */}
               <div className="absolute -inset-8 bg-gradient-to-tr from-emergency-red/30 via-emergency-red/10 to-transparent rounded-3xl blur-3xl" />
               <img src={plumberHero} alt="Professional emergency plumber fixing a burst pipe" className="relative w-full max-w-2xl mx-auto rounded-2xl object-cover shadow-2xl shadow-emergency-red/20" />
