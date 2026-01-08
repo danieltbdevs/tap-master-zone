@@ -7,10 +7,12 @@ import FAQSection from "@/components/FAQSection";
 import CallbackFormSection from "@/components/CallbackFormSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ThemeToggle />
       <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />
