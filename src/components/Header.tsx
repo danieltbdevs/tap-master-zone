@@ -2,6 +2,7 @@ import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -44,6 +45,8 @@ const Header = () => {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-3">
+            <ThemeToggle />
+            
             {/* Desktop CTA */}
             <Button variant="hero" size="sm" className="hidden lg:flex" asChild>
               <a href="tel:+441234567890">
