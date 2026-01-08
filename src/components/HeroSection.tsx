@@ -8,10 +8,10 @@ const HeroSection = () => {
       {/* Background gradient for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0B0C10] via-[#0B0C10] to-[#1a0a0a]" />
       
-      <div className="container relative z-10 py-16 lg:py-0">
+      <div className="relative z-10 py-16 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen lg:min-h-0 lg:py-20">
           {/* Left Content */}
-          <div className="space-y-8 fade-in order-2 lg:order-1">
+          <div className="space-y-8 fade-in order-2 lg:order-1 container lg:pr-0">
             {/* Tagline */}
             <div className="inline-flex items-center gap-2">
               <span className="text-sm font-semibold tracking-widest uppercase text-emergency-red">
@@ -94,7 +94,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative order-1 lg:order-2 h-[400px] lg:h-[600px]">
+          <div className="absolute inset-0 lg:left-0 lg:-right-[50vw] order-1 lg:order-2">
             <div className="absolute inset-0 overflow-hidden">
               <img 
                 src={plumberHero} 
@@ -102,7 +102,7 @@ const HeroSection = () => {
                 className="w-full h-full object-cover object-center"
               />
               {/* Gradient fade into background */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0B0C10]/80 lg:to-[#0B0C10]" />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0B0C10]" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-b from-[#0B0C10]/50 via-transparent to-transparent" />
             </div>
