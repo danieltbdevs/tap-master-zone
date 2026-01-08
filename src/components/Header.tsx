@@ -20,7 +20,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-[130px]">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 relative group">
+          <a href="/" onClick={() => window.location.reload()} className="flex-shrink-0 relative group">
             {/* Glow effect */}
             <div className="absolute -inset-2 bg-gradient-to-r from-emergency-red/20 via-blue-500/20 to-emergency-red/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <img 
