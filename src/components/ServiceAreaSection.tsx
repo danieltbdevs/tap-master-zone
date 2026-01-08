@@ -34,7 +34,7 @@ const ServiceAreaSection = () => {
                 We cover all of Peterborough and surrounding villages. Not sure if we cover your area? Just call – we'll confirm instantly.
               </p>
               
-              <Button variant="emergency" size="lg" asChild>
+              <Button size="lg" className="bg-[#1f2937] hover:bg-[#1f2937]/90 text-white" asChild>
                 <a href="tel:+441234567890">
                   <Phone className="w-5 h-5" />
                   Check if We Cover Your Area
