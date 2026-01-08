@@ -26,28 +26,28 @@ const CallbackFormSection = () => {
   };
 
   return (
-    <section id="callback-form" className="py-20 lg:py-28">
-      <div className="container">
+    <section id="callback-form" className="py-12 sm:py-16 lg:py-28">
+      <div className="container px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
-          <div className="glass-card rounded-3xl p-8 lg:p-12">
+          <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
             {/* Section Header */}
-            <div className="text-center mb-10">
-              <span className="inline-block text-sm font-semibold text-emergency-red uppercase tracking-wider mb-4">
+            <div className="text-center mb-8 sm:mb-10">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-emergency-red uppercase tracking-wider mb-3 sm:mb-4">
                 Get Help Fast
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
                 Need Help Fast? Request a Call Back
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Submit your details and we'll call you back within 10 minutes.
               </p>
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <label htmlFor="name" className="text-xs sm:text-sm font-medium">
                     Full Name
                   </label>
                   <Input
@@ -55,11 +55,11 @@ const CallbackFormSection = () => {
                     name="name"
                     placeholder="John Smith"
                     required
-                    className="h-12 bg-secondary/50 border-border"
+                    className="h-11 sm:h-12 bg-secondary/50 border-border text-sm sm:text-base"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <label htmlFor="phone" className="text-xs sm:text-sm font-medium">
                     Phone Number *
                   </label>
                   <Input
@@ -68,25 +68,25 @@ const CallbackFormSection = () => {
                     type="tel"
                     placeholder="07xxx xxxxxx"
                     required
-                    className="h-12 bg-secondary/50 border-border"
+                    className="h-11 sm:h-12 bg-secondary/50 border-border text-sm sm:text-base"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="postcode" className="text-sm font-medium">
+              <div className="space-y-1.5 sm:space-y-2">
+                <label htmlFor="postcode" className="text-xs sm:text-sm font-medium">
                   Postcode
                 </label>
                 <Input
                   id="postcode"
                   name="postcode"
                   placeholder="PE1 1AA"
-                  className="h-12 bg-secondary/50 border-border"
+                  className="h-11 sm:h-12 bg-secondary/50 border-border text-sm sm:text-base"
                 />
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="issue" className="text-sm font-medium">
+              <div className="space-y-1.5 sm:space-y-2">
+                <label htmlFor="issue" className="text-xs sm:text-sm font-medium">
                   Describe Your Issue (Optional)
                 </label>
                 <Textarea
@@ -94,7 +94,7 @@ const CallbackFormSection = () => {
                   name="issue"
                   placeholder="e.g., Burst pipe in kitchen, water everywhere..."
                   rows={4}
-                  className="bg-secondary/50 border-border resize-none"
+                  className="bg-secondary/50 border-border resize-none text-sm sm:text-base"
                 />
               </div>
 
@@ -102,23 +102,23 @@ const CallbackFormSection = () => {
                 type="submit"
                 variant="emergency"
                 size="xl"
-                className="w-full"
+                className="w-full text-sm sm:text-base"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
                     Submitting...
                   </>
                 ) : (
                   <>
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                     Request Call Back
                   </>
                 )}
               </Button>
 
-              <p className="text-center text-sm text-muted-foreground">
+              <p className="text-center text-xs sm:text-sm text-muted-foreground">
                 We'll call you back within 10 minutes, 24/7.
               </p>
             </form>

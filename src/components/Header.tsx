@@ -17,8 +17,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200 shadow-sm">
-      <div className="container">
-        <div className="flex items-center justify-between h-[130px]">
+      <div className="container px-4 sm:px-6">
+        <div className="flex items-center justify-between h-[80px] sm:h-[100px] lg:h-[130px]">
           {/* Logo */}
           <a href="/" onClick={() => window.location.reload()} className="flex-shrink-0 relative group">
             {/* Glow effect */}
@@ -26,7 +26,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Peterborough Emergency Plumbers" 
-              className="relative w-[320px] h-[164px] object-contain"
+              className="relative w-[180px] h-[92px] sm:w-[240px] sm:h-[123px] lg:w-[320px] lg:h-[164px] object-contain"
             />
           </a>
 
@@ -44,7 +44,7 @@ const Header = () => {
           </nav>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             
             
             {/* Desktop CTA */}
@@ -61,7 +61,7 @@ const Header = () => {
               className="lg:hidden p-2 text-foreground"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -69,13 +69,13 @@ const Header = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border/50">
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-3 sm:gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  className="text-sm sm:text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                 >
                   {link.label}
                 </a>
