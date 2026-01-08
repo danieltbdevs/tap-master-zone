@@ -1,16 +1,19 @@
 import { Phone, MessageCircle, Star, Shield, Clock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import plumberHero from "@/assets/plumber-hero-new.webp";
 
 const HeroSection = () => {
   return (
     <section className="relative lg:min-h-screen flex items-center overflow-hidden bg-[#0B0C10]">
-      {/* Background Image */}
-      <img
-        src={plumberHero}
-        alt=""
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
-      />
+      >
+        <source src="https://res.cloudinary.com/dha2xktfr/video/upload/v1750941817/bdv50rbwjspwinzo1wkn.mp4" type="video/mp4" />
+      </video>
       
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-black/60" />
