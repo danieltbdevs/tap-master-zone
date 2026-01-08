@@ -1,15 +1,19 @@
 import { Phone, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import plumberHero from "@/assets/plumber-hero.jpg";
+import plumberHero from "@/assets/plumber-hero.webp";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-surface-dark to-background" />
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-      }} />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
+      {/* Background Image with Gradient Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${plumberHero})` }}
+      />
+      {/* Dark gradient overlay from left to blend content */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/90 to-transparent" />
+      {/* Additional vertical gradient for depth */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-[#0a0a0f]/50" />
 
       <div className="container relative z-10 py-16 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -82,34 +86,25 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative hidden lg:block">
-            <div className="relative z-10">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-emergency-red/20 via-transparent to-emergency-red/10 rounded-3xl blur-3xl" />
-              <img
-                src={plumberHero}
-                alt="Professional emergency plumber ready to help"
-                className="relative w-full max-w-lg mx-auto rounded-3xl shadow-2xl object-cover"
-              />
-            </div>
-            
+          {/* Floating Badges - No longer need the image here since it's the background */}
+          <div className="relative hidden lg:flex flex-col justify-center items-center gap-8">
             {/* Floating Badge */}
-            <div className="absolute -right-4 top-1/4 glass-card rounded-2xl p-4 animate-float">
+            <div className="glass-card rounded-2xl p-6 animate-float">
               <div className="text-center">
-                <div className="text-3xl font-black text-emergency-red">30</div>
-                <div className="text-xs text-muted-foreground">min avg response</div>
+                <div className="text-4xl font-black text-emergency-red">30</div>
+                <div className="text-sm text-muted-foreground">min avg response</div>
               </div>
             </div>
 
             {/* Another Badge */}
-            <div className="absolute -left-4 bottom-1/4 glass-card rounded-2xl p-4 animate-float" style={{ animationDelay: '1s' }}>
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-emergency-red flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-white" />
+            <div className="glass-card rounded-2xl p-4 animate-float" style={{ animationDelay: '1s' }}>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-emergency-red flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold">Available Now</div>
-                  <div className="text-xs text-muted-foreground">Ready to dispatch</div>
+                  <div className="text-base font-semibold">Available Now</div>
+                  <div className="text-sm text-muted-foreground">Ready to dispatch</div>
                 </div>
               </div>
             </div>
