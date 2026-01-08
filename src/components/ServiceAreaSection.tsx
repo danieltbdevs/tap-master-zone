@@ -20,7 +20,7 @@ const ServiceAreaSection = () => {
   return (
     <section className="py-20 lg:py-28">
       <div className="container">
-        <div className="glass-card rounded-3xl p-8 lg:p-12">
+        <div className="bg-[#1f2937] rounded-3xl p-8 lg:p-12 text-white">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div className="space-y-6">
