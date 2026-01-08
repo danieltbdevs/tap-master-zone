@@ -5,17 +5,17 @@ import plumberHero from "@/assets/plumber-hero-new.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
-      {/* Background Image - Full width with gradient overlay */}
+      {/* Background Image - Positioned to show the plumber on the right */}
       <div className="absolute inset-0">
         <img 
           src={plumberHero} 
           alt="Professional emergency plumber fixing a burst pipe" 
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-right"
         />
         {/* Left dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/80 to-transparent lg:to-transparent" />
         {/* Additional top/bottom gradients for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/50 via-transparent to-[#0a0a0f]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/60 via-transparent to-[#0a0a0f]/40" />
       </div>
       
       <div className="container relative z-10 py-16 lg:py-0">
