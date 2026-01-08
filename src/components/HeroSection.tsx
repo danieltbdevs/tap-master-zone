@@ -98,7 +98,7 @@ const HeroSection = () => {
             <img 
               src={plumberHero} 
               alt="Professional emergency plumber fixing a burst pipe" 
-              className="w-full h-full object-cover object-[70%_top] lg:object-[70%_center] sm:rounded-lg"
+              className="w-full h-full object-cover object-[85%_top] lg:object-[85%_center] sm:rounded-lg"
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0B0C10]/70 sm:rounded-lg" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/50 to-transparent sm:rounded-lg" />
