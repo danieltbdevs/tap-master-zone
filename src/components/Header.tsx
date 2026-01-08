@@ -15,12 +15,26 @@ const navLinks = [
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToSection = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm">
       <div className="container px-4 sm:px-6">
         <div className="flex items-center justify-between h-[80px] sm:h-[100px] lg:h-[130px]">
           {/* Logo */}
-          <a href="/" onClick={() => window.location.reload()} className="flex-shrink-0 relative group">
+          <a href="#" onClick={scrollToTop} className="flex-shrink-0 relative group cursor-pointer">
             {/* Glow effect */}
             <div className="absolute -inset-2 bg-gradient-to-r from-emergency-red/20 via-blue-500/20 to-emergency-red/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <img 
@@ -36,7 +50,8 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               >
                 {link.label}
               </a>
@@ -74,8 +89,8 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm sm:text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className="text-sm sm:text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2 cursor-pointer"
                 >
                   {link.label}
                 </a>
