@@ -21,6 +21,18 @@ const testimonials = [
     name: "Alan D",
     text: "We had a major plumbing issue at our factory, and these guys were fantastic. Their team is skilled and got everything running smoothly again in no time. Top-notch industrial plumbing service.",
   },
+  {
+    name: "Sarah T",
+    text: "Called them at midnight for an emergency burst pipe. They arrived within 30 minutes and saved us from serious water damage. Absolutely lifesavers! Will always recommend their 24/7 service.",
+  },
+  {
+    name: "Marcus W",
+    text: "Professional from start to finish. They gave an honest quote, showed up on time, and completed the bathroom renovation plumbing perfectly. No hidden fees, no surprises. Great experience!",
+  },
+  {
+    name: "Jennifer L",
+    text: "Had them install a new water heater and they were brilliant. Explained everything clearly, cleaned up after themselves, and the price was fair. Highly recommend for any plumbing work.",
+  },
 ];
 
 const TestimonialsSection = () => {
