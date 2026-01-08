@@ -34,12 +34,14 @@ const ServiceAreaSection = () => {
                 We cover all of Peterborough and surrounding villages. Not sure if we cover your area? Just call – we'll confirm instantly.
               </p>
               
-              <Button variant="emergency" size="lg" className="w-full sm:w-auto" asChild>
-                <a href="tel:+441234567890">
-                  <Phone className="w-5 h-5" />
-                  Check if We Cover Your Area
-                </a>
-              </Button>
+              <div className="flex justify-center sm:justify-start">
+                <Button variant="emergency" size="default" className="sm:size-lg text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3" asChild>
+                  <a href="tel:+441234567890">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                    Check if We Cover Your Area
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Areas List */}
