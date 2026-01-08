@@ -41,7 +41,7 @@ const Footer = () => {
                 01234 567 890
               </a>
             </Button>
-            <Button variant="heroSecondary" size="xl" asChild>
+            <Button size="xl" className="bg-[#25D366] hover:bg-[#1ebe5a] text-white" asChild>
               <a href="https://wa.me/441234567890" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Us
