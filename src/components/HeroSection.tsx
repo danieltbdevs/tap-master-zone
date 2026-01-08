@@ -94,14 +94,13 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image - Shows second on mobile */}
-          <div className="relative order-2 lg:order-2 h-[280px] sm:h-[350px] lg:h-[600px]">
+          <div className="relative order-2 lg:order-2 h-[280px] sm:h-[350px] lg:h-[500px] bg-[#1F2937] rounded-2xl overflow-hidden border border-white/10">
             <img 
               src={plumberHero} 
               alt="Professional emergency plumber fixing a burst pipe" 
-              className="w-full h-full object-cover object-[85%_top] lg:object-[85%_center] sm:rounded-lg"
+              className="w-full h-full object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0B0C10]/70 sm:rounded-lg" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/50 to-transparent sm:rounded-lg" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/30 to-transparent rounded-2xl pointer-events-none" />
           </div>
         </div>
       </div>
