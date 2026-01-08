@@ -95,7 +95,7 @@ const HeroSection = () => {
 
           {/* Right Image */}
           <div className="relative order-1 lg:order-2 h-[400px] lg:h-[600px]">
-            <div className="absolute inset-0 rounded-2xl overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden">
               <img 
                 src={plumberHero} 
                 alt="Professional emergency plumber fixing a burst pipe" 
