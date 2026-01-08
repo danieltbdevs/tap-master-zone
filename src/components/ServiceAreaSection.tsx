@@ -20,14 +20,14 @@ const ServiceAreaSection = () => {
   return (
     <section className="py-12 sm:py-16 lg:py-28">
       <div className="container px-4 sm:px-6">
-        <div className="bg-gray-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white">
+        <div className="bg-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
             {/* Content */}
             <div className="space-y-4 sm:space-y-6">
               <span className="inline-block text-xs sm:text-sm font-semibold text-emergency-red uppercase tracking-wider">
                 Coverage Area
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                 Serving Peterborough & Surrounding Areas
               </h2>
               <p className="text-base sm:text-lg text-gray-200">
@@ -48,7 +48,7 @@ const ServiceAreaSection = () => {
                 {areas.map((area, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3"
+                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 border border-white/10"
                   >
                     <MapPin className="w-4 h-4 text-emergency-red flex-shrink-0" />
                     <span className="text-xs sm:text-sm text-white font-medium">{area}</span>
