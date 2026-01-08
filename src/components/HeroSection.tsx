@@ -1,6 +1,6 @@
 import { Phone, MessageCircle, Star, Shield, Clock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import plumberHero from "@/assets/plumber-hero-new.webp";
+import plumberHero from "@/assets/plumber-hero-v2.png";
 
 const HeroSection = () => {
   return (
