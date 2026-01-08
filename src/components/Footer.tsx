@@ -22,9 +22,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#222222] text-white">
+    <footer>
       {/* CTA Section */}
-      <div className="container py-16">
+      <div className="bg-background text-foreground">
+        <div className="container py-16">
         <div className="text-center space-y-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             24/7 Emergency Help Available
@@ -47,11 +48,14 @@ const Footer = () => {
               </a>
             </Button>
           </div>
+          </div>
         </div>
       </div>
 
-      {/* Main Footer Content */}
-      <div className="border-t border-white/10">
+      {/* Main Footer - Dark Section */}
+      <div className="bg-[#222222] text-white">
+        {/* Main Footer Content */}
+        <div className="border-t border-white/10">
         <div className="container py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Info */}
@@ -150,18 +154,19 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
 
-      {/* Copyright */}
-      <div className="border-t border-white/10">
-        <div className="container py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-400">
-              © {currentYear} Peterborough Emergency Plumbers. All Rights Reserved.
-            </p>
-            <p className="text-xs text-gray-500 text-center md:text-right">
-              Registered address: Peterborough Emergency Plumbers Ltd, registered as a company in England. VAT registration number pending.
-            </p>
+        {/* Copyright */}
+        <div className="border-t border-white/10">
+          <div className="container py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-gray-400">
+                © {currentYear} Peterborough Emergency Plumbers. All Rights Reserved.
+              </p>
+              <p className="text-xs text-gray-500 text-center md:text-right">
+                Registered address: Peterborough Emergency Plumbers Ltd, registered as a company in England. VAT registration number pending.
+              </p>
+            </div>
           </div>
         </div>
       </div>
