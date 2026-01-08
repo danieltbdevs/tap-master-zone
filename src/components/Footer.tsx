@@ -1,5 +1,6 @@
 import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -37,7 +38,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">Peterborough Emergency Plumbers</h3>
+              <img src={logo} alt="Peterborough Emergency Plumbers" className="h-10 w-auto" />
               <p className="text-muted-foreground">
                 Fast, reliable emergency plumbing services across Peterborough and surrounding areas. Available 24/7.
               </p>
