@@ -27,7 +27,7 @@ const ServiceAreaSection = () => {
               <span className="inline-block text-xs sm:text-sm font-semibold text-emergency-red uppercase tracking-wider">
                 Coverage Area
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                 Serving Peterborough & Surrounding Areas
               </h2>
               <p className="text-base sm:text-lg text-gray-200">
@@ -48,7 +48,7 @@ const ServiceAreaSection = () => {
                 {areas.map((area, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 border border-white/10"
+                    className="flex items-center gap-2 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3"
                   >
                     <MapPin className="w-4 h-4 text-emergency-red flex-shrink-0" />
                     <span className="text-xs sm:text-sm text-white font-medium">{area}</span>
