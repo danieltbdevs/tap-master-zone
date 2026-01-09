@@ -42,9 +42,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-[60px] sm:h-[70px] lg:h-[80px]">
           {/* Logo */}
           <a href="#" onClick={scrollToTop} className="flex-shrink-0 relative group cursor-pointer">
-            {/* Glow effect */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-emergency-red/20 via-blue-500/20 to-emergency-red/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            
+            <img 
+              src={logo} 
+              alt="T&G Services Logo" 
+              className="w-[50px] h-auto sm:w-[60px] lg:w-[70px]"
+            />
           </a>
 
           {/* Desktop Navigation */}
