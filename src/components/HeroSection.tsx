@@ -1,10 +1,8 @@
 import { Phone, MessageCircle, Star, Shield, Clock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import plumberHero from "@/assets/plumber-hero-new.webp";
-
 const HeroSection = () => {
-  return (
-    <section className="relative lg:min-h-screen flex items-center overflow-hidden bg-[#0B0C10]">
+  return <section className="relative lg:min-h-screen flex items-center overflow-hidden bg-[#0B0C10]">
       {/* Background gradient for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0B0C10] via-[#0B0C10] to-[#1a0a0a]" />
       
@@ -53,17 +51,13 @@ const HeroSection = () => {
             {/* Social Proof Row */}
             <div className="flex items-center gap-3 sm:gap-4 pt-2">
               <div className="flex -space-x-2">
-                {[...Array(4)].map((_, i) => (
-                  <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 border-2 border-[#0B0C10] flex items-center justify-center">
+                {[...Array(4)].map((_, i) => <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 border-2 border-[#0B0C10] flex items-center justify-center">
                     <span className="text-xs text-white font-semibold">{['JD', 'MK', 'RS', 'AL'][i]}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   <span className="text-white font-semibold text-sm sm:text-base ml-1">4.9/5</span>
                 </div>
                 <span className="text-xs sm:text-sm text-gray-400">200+ local reviews</span>
@@ -88,15 +82,9 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image - responsive aspect ratio instead of fixed height */}
-          <img 
-            alt="Professional emergency plumber fixing a burst pipe" 
-            src="/lovable-uploads/79ce9a29-4b32-4524-b7aa-2d0e78cfbb18.png" 
-            className="order-2 lg:order-2 w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[600px] object-cover object-top lg:object-center rounded-lg border-8" 
-          />
+          <img alt="Professional emergency plumber fixing a burst pipe" src="/lovable-uploads/79ce9a29-4b32-4524-b7aa-2d0e78cfbb18.png" className="order-2 lg:order-2 w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[600px] object-cover object-top lg:object-center border border-secondary-foreground border-none shadow-inner rounded-none" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
