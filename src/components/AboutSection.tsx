@@ -4,46 +4,48 @@ import technicianImage from "@/assets/technician-hero.png";
 
 const AboutSection = () => {
   return (
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-[var(--space-section)] bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left Image */}
+          {/* Left Image - responsive with aspect ratio */}
           <div className="relative">
             <img
               src={technicianImage}
               alt="T&G Services Professional Technician"
-              className="w-full h-auto rounded-lg shadow-xl"
+              className="w-full h-auto max-w-full rounded-lg shadow-xl"
             />
           </div>
 
           {/* Right Content */}
           <div className="space-y-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
+            <h2 className="text-[length:var(--text-3xl)] lg:text-[length:var(--text-4xl)] font-bold text-foreground uppercase tracking-tight">
               Searching for Plumbers Near Me?
             </h2>
             
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-[length:var(--text-lg)]">
               Are you searching for Plumbers Near Me? Looking for a professional plumber 
               in your area that can help with a project?
             </p>
             
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-[length:var(--text-base)]">
               Have you sprung a leak at home or work? T&G Services offers you experienced 
               professional technicians that can resolve all types of commercial and 
               residential plumbing challenges as well as offering the expertise and 
               knowledge you need.
             </p>
             
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-[length:var(--text-base)]">
               We offer Emergency Plumber Services from the small and simple jobs to the 
               large and complex. Our plumbers track record and references are outstanding. 
               Our plumbers serve the residential and commercial sector in your area and 
               the surrounding areas.
             </p>
 
-            <Button variant="emergency" size="lg" className="w-full sm:w-auto gap-2">
-              <Phone className="h-5 w-5" />
-              <span className="font-bold">PLEASE CALL US FOR EMERGENCY SERVICE</span>
+            <Button variant="emergency" size="lg" className="w-full sm:w-auto gap-2 min-h-[48px]" asChild>
+              <a href="tel:+441234567890">
+                <Phone className="h-5 w-5" />
+                <span className="font-bold">PLEASE CALL US FOR EMERGENCY SERVICE</span>
+              </a>
             </Button>
 
             {/* Services List */}
