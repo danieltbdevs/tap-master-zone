@@ -50,7 +50,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#" onClick={scrollToTop} className="flex-shrink-0 relative group cursor-pointer">
             <img
-              width="280"
+              width="300"
               height="150"
               src={logo}
               alt="T&G Services Logo"
