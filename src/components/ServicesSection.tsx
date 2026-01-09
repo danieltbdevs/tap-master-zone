@@ -1,38 +1,76 @@
-import { Droplets, Wrench, CircleOff, Flame, AlertTriangle, Search } from "lucide-react";
-const services = [{
-  icon: Droplets,
-  title: "Burst Pipes",
-  description: "Rapid emergency repairs to prevent water damage"
-}, {
-  icon: Wrench,
-  title: "Leaking Taps & Toilets",
-  description: "Quick fixes to stop leaks and save water"
-}, {
-  icon: CircleOff,
-  title: "Blocked Drains",
-  description: "Professional drain clearing and unblocking"
-}, {
-  icon: Flame,
-  title: "Boiler Issues",
-  description: "No hot water? We'll get it running fast"
-}, {
-  icon: AlertTriangle,
-  title: "Overflowing Systems",
-  description: "Emergency overflow prevention & repair"
-}, {
-  icon: Search,
-  title: "Rapid Diagnosis",
-  description: "Find and fix the problem quickly"
-}];
+const services = [
+  {
+    title: "Burst Pipes",
+    description: "A burst pipe can cause serious damage within minutes, flooding your home and ruining floors, walls, and belongings. Our emergency team responds rapidly to minimize water damage.",
+    bullets: [
+      "24/7 emergency response for burst pipe repairs",
+      "Fast water shut-off to prevent further damage",
+      "Professional pipe replacement and repair",
+      "Water damage assessment and prevention advice",
+    ],
+  },
+  {
+    title: "Blocked Drains",
+    description: "Blocked drains can cause serious issues, from slow water flow to complete backups. Our team clears blockages fast using professional tools and techniques.",
+    bullets: [
+      "Grease, fat and food buildup in kitchen sinks",
+      "Hair, soap and toiletries clogging bathroom drains",
+      "Tree roots and debris blocking external drains",
+      "Heavy scale deposits restricting water flow",
+    ],
+  },
+  {
+    title: "Boiler Issues",
+    description: "No hot water or heating? We diagnose and fix boiler problems quickly to restore your comfort. Our methods include comprehensive checks and repairs.",
+    bullets: [
+      "Boiler breakdowns and error code diagnosis",
+      "Pilot light and ignition issues",
+      "Pressure problems and leaking boilers",
+      "Full replacements for severely damaged units",
+    ],
+  },
+  {
+    title: "Drain Clearance & Maintenance",
+    description: "Prevention is key to avoiding costly drain emergencies. Our maintenance services help keep your drains clean by:",
+    bullets: [
+      "Carrying out regular drain descaling and grease removal",
+      "Performing CCTV inspections to identify problems",
+      "Providing scheduled maintenance plans for properties",
+      "Routine drain cleaning to prevent blockages",
+    ],
+  },
+  {
+    title: "Leaking Taps & Toilets",
+    description: "A dripping tap or running toilet wastes water and money. We provide quick, effective repairs to stop leaks and save you from rising bills.",
+    bullets: [
+      "Washer and valve replacements",
+      "Toilet cistern repairs and adjustments",
+      "Complete tap overhauls and upgrades",
+      "Water-saving fixture recommendations",
+    ],
+  },
+  {
+    title: "Overflowing Systems",
+    description: "Overflowing tanks and systems need immediate attention to prevent water damage and disruption. Our team handles all overflow emergencies.",
+    bullets: [
+      "Ball valve and float repairs",
+      "Tank and cistern overflow fixes",
+      "System pressure adjustments",
+      "Preventative maintenance solutions",
+    ],
+  },
+];
+
 const ServicesSection = () => {
-  return <section className="py-12 sm:py-16 lg:py-28 bg-surface-dark mx-0">
+  return (
+    <section className="py-[var(--space-section)] bg-background">
       <div className="container px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
           <span className="inline-block text-xs sm:text-sm font-semibold text-emergency-red uppercase tracking-wider mb-3 sm:mb-4">
             Emergency Services
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-[length:var(--text-h2)] font-bold mb-4 sm:mb-6 text-primary">
             We Handle All Plumbing Emergencies
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
@@ -40,19 +78,59 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {services.map((service, index) => <div key={index} className="group glass-card rounded-xl sm:rounded-2xl p-5 sm:p-8 hover-lift cursor-default" style={{
-          animationDelay: `${index * 100}ms`
-        }}>
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-emergency-red/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-emergency-red/20 transition-colors">
-                <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-emergency-red" />
+        {/* Services List - Alternating Layout */}
+        <div className="space-y-12 sm:space-y-16 lg:space-y-24">
+          {services.map((service, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <div
+                key={index}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center ${
+                  isEven ? "" : "lg:flex-row-reverse"
+                }`}
+              >
+                {/* Image Placeholder */}
+                <div
+                  className={`order-1 ${isEven ? "lg:order-1" : "lg:order-2"}`}
+                >
+                  <div className="aspect-[4/3] rounded-xl sm:rounded-2xl bg-muted border-2 border-dashed border-border flex items-center justify-center">
+                    <span className="text-muted-foreground text-sm sm:text-base">
+                      Image Placeholder
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div
+                  className={`order-2 ${isEven ? "lg:order-2" : "lg:order-1"}`}
+                >
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-3 sm:mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 sm:space-y-3">
+                    {service.bullets.map((bullet, bulletIndex) => (
+                      <li
+                        key={bulletIndex}
+                        className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-foreground"
+                      >
+                        <span className="text-emergency-red mt-1.5 flex-shrink-0">
+                          •
+                        </span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{service.title}</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">{service.description}</p>
-            </div>)}
+            );
+          })}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;
