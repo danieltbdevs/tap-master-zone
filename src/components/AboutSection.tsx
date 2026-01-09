@@ -1,19 +1,13 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import technicianImage from "@/assets/technician-hero.png";
-
 const AboutSection = () => {
-  return (
-    <section className="py-[var(--space-section)] bg-background">
+  return <section className="py-[var(--space-section)] bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Image - responsive with aspect ratio */}
           <div className="relative">
-            <img
-              src={technicianImage}
-              alt="T&G Services Professional Technician"
-              className="w-full h-auto max-w-full rounded-lg shadow-xl"
-            />
+            <img alt="T&G Services Professional Technician" className="w-full h-auto max-w-full rounded-lg shadow-xl" src="/lovable-uploads/f6ee12a2-734c-42d7-b000-d6f8c6405504.png" />
           </div>
 
           {/* Right Content */}
@@ -78,8 +72,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
