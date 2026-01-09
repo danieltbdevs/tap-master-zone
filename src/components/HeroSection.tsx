@@ -82,7 +82,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image - responsive aspect ratio instead of fixed height */}
-          <img alt="Professional emergency plumber fixing a burst pipe" src="/lovable-uploads/79ce9a29-4b32-4524-b7aa-2d0e78cfbb18.png" className="order-2 lg:order-2 w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[600px] object-cover object-top lg:object-center border border-secondary-foreground border-none shadow-inner rounded-none" />
+          <img alt="Professional emergency plumber fixing a burst pipe" src="/lovable-uploads/79ce9a29-4b32-4524-b7aa-2d0e78cfbb18.png" className="order-2 lg:order-2 w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[600px] object-cover object-[60%_top] lg:object-[60%_center] border border-secondary-foreground border-none shadow-inner rounded-none" />
         </div>
       </div>
     </section>;
