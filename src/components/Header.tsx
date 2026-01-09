@@ -49,7 +49,7 @@ const Header = () => {
               alt="T&G Services Logo" 
               decoding="async"
               sizes="(max-width: 800px) 100vw, 254px"
-              className="w-auto h-[50px] sm:h-[60px] lg:h-[80px] object-contain"
+              className="w-auto h-[70px] sm:h-[90px] lg:h-[110px] object-contain"
             />
           </a>
 
