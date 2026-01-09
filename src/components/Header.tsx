@@ -39,7 +39,7 @@ const Header = () => {
   };
   return <header className="bg-white border-b border-gray-200 shadow-sm">
       <div className="container px-4 sm:px-6">
-        <div className="flex items-center justify-between h-[60px] sm:h-[70px] lg:h-[80px]">
+        <div className="flex items-center justify-between h-[110px] sm:h-[140px] lg:h-[170px]">
           {/* Logo */}
           <a href="#" onClick={scrollToTop} className="flex-shrink-0 relative group cursor-pointer">
             <img 
@@ -49,7 +49,7 @@ const Header = () => {
               alt="T&G Services Logo" 
               decoding="async"
               sizes="(max-width: 800px) 100vw, 254px"
-              className="w-auto h-[70px] sm:h-[90px] lg:h-[110px] object-contain"
+              className="w-auto h-[100px] sm:h-[130px] lg:h-[160px] object-contain"
             />
           </a>
 
