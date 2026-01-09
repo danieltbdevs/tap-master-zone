@@ -43,9 +43,13 @@ const Header = () => {
           {/* Logo */}
           <a href="#" onClick={scrollToTop} className="flex-shrink-0 relative group cursor-pointer">
             <img 
+              width="254"
+              height="130"
               src={logo} 
               alt="T&G Services Logo" 
-              className="w-[50px] h-auto sm:w-[60px] lg:w-[70px]"
+              decoding="async"
+              sizes="(max-width: 800px) 100vw, 254px"
+              className="w-auto h-[50px] sm:h-[60px] lg:h-[80px] object-contain"
             />
           </a>
 
