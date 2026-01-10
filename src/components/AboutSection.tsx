@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Image - responsive with aspect ratio */}
           <div className="relative">
-            <img alt="T&G Services Professional Technician" className="w-full h-auto max-w-full rounded-lg shadow-xl" src="/lovable-uploads/f6ee12a2-734c-42d7-b000-d6f8c6405504.png" />
+            <img alt="T&G Services Professional Technician" className="w-full h-auto max-w-full rounded-lg shadow-xl" src="/lovable-uploads/d6ce01fa-362f-45e9-adf4-bbc346cc5699.png" />
           </div>
 
           {/* Right Content */}
