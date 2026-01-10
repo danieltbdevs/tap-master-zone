@@ -1,4 +1,5 @@
 import burstPipesImg from "@/assets/burst-pipes.png";
+import blockedDrainsImg from "@/assets/blocked-drains.png";
 
 const services = [
   {
@@ -21,7 +22,7 @@ const services = [
       "Tree roots and debris blocking external drains",
       "Heavy scale deposits restricting water flow",
     ],
-    image: null,
+    image: blockedDrainsImg,
   },
   {
     title: "Boiler Issues",
