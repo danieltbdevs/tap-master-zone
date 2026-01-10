@@ -1,6 +1,6 @@
 import { Phone, MessageCircle, Star, Shield, Clock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import plumberHero from "@/assets/plumber-hero-new.webp";
+import plumberHero from "@/assets/plumber-hero-action.png";
 const HeroSection = () => {
   return <section className="relative lg:min-h-screen flex items-center overflow-hidden bg-[#0B0C10]">
       {/* Background gradient for depth */}
@@ -83,7 +83,13 @@ const HeroSection = () => {
 
           {/* Right Image - responsive aspect ratio instead of fixed height */}
           <div className="order-2 lg:order-2">
-            
+            <div className="relative">
+              <img
+                src={plumberHero}
+                alt="Professional emergency plumber repairing a leaking pipe"
+                className="w-full h-auto object-cover rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </div>
