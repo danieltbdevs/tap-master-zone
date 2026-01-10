@@ -1,24 +1,8 @@
 import { MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const areas = [
-  "Peterborough City Centre",
-  "Werrington",
-  "Hampton",
-  "Bretton",
-  "Orton",
-  "Stanground",
-  "Fletton",
-  "Woodston",
-  "Longthorpe",
-  "Castor",
-  "Eye",
-  "Yaxley",
-];
-
+const areas = ["Peterborough City Centre", "Werrington", "Hampton", "Bretton", "Orton", "Stanground", "Fletton", "Woodston", "Longthorpe", "Castor", "Eye", "Yaxley"];
 const ServiceAreaSection = () => {
-  return (
-    <section className="py-12 sm:py-16 lg:py-28">
+  return <section className="py-12 sm:py-16 lg:py-28">
       <div className="container px-4 sm:px-6">
         <div className="bg-gray-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
@@ -36,10 +20,7 @@ const ServiceAreaSection = () => {
               
               <div className="flex justify-center lg:justify-start">
                 <Button variant="emergency" size="lg" className="px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base" asChild>
-                  <a href="tel:+441234567890">
-                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Check if We Cover Your Area
-                  </a>
+                  
                 </Button>
               </div>
             </div>
@@ -47,15 +28,10 @@ const ServiceAreaSection = () => {
             {/* Areas List */}
             <div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
-                {areas.map((area, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-1.5 sm:gap-2 bg-secondary/50 rounded-lg px-3 sm:px-4 py-2 sm:py-3"
-                  >
+                {areas.map((area, index) => <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-secondary/50 rounded-lg px-3 sm:px-4 py-2 sm:py-3">
                     <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emergency-red flex-shrink-0" />
                     <span className="text-xs sm:text-sm">{area}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -69,32 +45,17 @@ const ServiceAreaSection = () => {
             </h3>
           </div>
           <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-border">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77766.98663990066!2d-0.3047699!3d52.5695235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877f055400b0de5%3A0x9c99c869d3e6823!2sPeterborough%2C%20UK!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
-              width="100%"
-              height="300"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Peterborough Service Area Map"
-              className="w-full sm:h-[400px]"
-            />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77766.98663990066!2d-0.3047699!3d52.5695235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877f055400b0de5%3A0x9c99c869d3e6823!2sPeterborough%2C%20UK!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus" width="100%" height="300" style={{
+            border: 0
+          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Peterborough Service Area Map" className="w-full sm:h-[400px]" />
           </div>
           <div className="mt-3 sm:mt-4 text-center">
-            <a 
-              href="https://www.google.com/maps/place/Peterborough,+UK" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:underline text-xs sm:text-sm font-medium"
-            >
+            <a href="https://www.google.com/maps/place/Peterborough,+UK" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-xs sm:text-sm font-medium">
               View larger map
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServiceAreaSection;
