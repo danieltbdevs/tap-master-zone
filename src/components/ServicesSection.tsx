@@ -2,6 +2,7 @@ import burstPipesImg from "@/assets/burst-pipes.png";
 import blockedDrainsImg from "@/assets/blocked-drains.png";
 import boilerIssuesImg from "@/assets/boiler-issues.png";
 import drainClearanceImg from "@/assets/drain-clearance.png";
+import leakingTapsImg from "@/assets/leaking-taps.png";
 
 const services = [
   {
@@ -57,7 +58,7 @@ const services = [
       "Complete tap overhauls and upgrades",
       "Water-saving fixture recommendations",
     ],
-    image: null,
+    image: leakingTapsImg,
   },
   {
     title: "Overflowing Systems",
