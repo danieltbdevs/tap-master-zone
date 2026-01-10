@@ -82,7 +82,15 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image - responsive aspect ratio instead of fixed height */}
-          
+          <div className="order-2 lg:order-2">
+            <div className="relative aspect-[4/5] lg:aspect-[3/4] max-h-[500px] lg:max-h-none">
+              <img 
+                src={plumberHero} 
+                alt="Professional emergency plumber ready to help" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>;
