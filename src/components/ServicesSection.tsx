@@ -3,6 +3,7 @@ import blockedDrainsImg from "@/assets/blocked-drains.png";
 import boilerIssuesImg from "@/assets/boiler-issues.png";
 import drainClearanceImg from "@/assets/drain-clearance.png";
 import leakingTapsImg from "@/assets/leaking-taps.png";
+import overflowingSystemsImg from "@/assets/overflowing-systems.png";
 
 const services = [
   {
@@ -69,7 +70,7 @@ const services = [
       "System pressure adjustments",
       "Preventative maintenance solutions",
     ],
-    image: null,
+    image: overflowingSystemsImg,
   },
 ];
 
