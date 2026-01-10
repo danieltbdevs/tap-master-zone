@@ -1,3 +1,5 @@
+import burstPipesImg from "@/assets/burst-pipes.png";
+
 const services = [
   {
     title: "Burst Pipes",
@@ -8,6 +10,7 @@ const services = [
       "Professional pipe replacement and repair",
       "Water damage assessment and prevention advice",
     ],
+    image: burstPipesImg,
   },
   {
     title: "Blocked Drains",
@@ -18,6 +21,7 @@ const services = [
       "Tree roots and debris blocking external drains",
       "Heavy scale deposits restricting water flow",
     ],
+    image: null,
   },
   {
     title: "Boiler Issues",
@@ -28,6 +32,7 @@ const services = [
       "Pressure problems and leaking boilers",
       "Full replacements for severely damaged units",
     ],
+    image: null,
   },
   {
     title: "Drain Clearance & Maintenance",
@@ -38,6 +43,7 @@ const services = [
       "Providing scheduled maintenance plans for properties",
       "Routine drain cleaning to prevent blockages",
     ],
+    image: null,
   },
   {
     title: "Leaking Taps & Toilets",
@@ -48,6 +54,7 @@ const services = [
       "Complete tap overhauls and upgrades",
       "Water-saving fixture recommendations",
     ],
+    image: null,
   },
   {
     title: "Overflowing Systems",
@@ -58,6 +65,7 @@ const services = [
       "System pressure adjustments",
       "Preventative maintenance solutions",
     ],
+    image: null,
   },
 ];
 
@@ -89,15 +97,23 @@ const ServicesSection = () => {
                   isEven ? "" : "lg:flex-row-reverse"
                 }`}
               >
-                {/* Image Placeholder */}
+                {/* Image */}
                 <div
                   className={`order-1 ${isEven ? "lg:order-1" : "lg:order-2"}`}
                 >
-                  <div className="aspect-[4/3] rounded-xl sm:rounded-2xl bg-muted border-2 border-dashed border-border flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm sm:text-base">
-                      Image Placeholder
-                    </span>
-                  </div>
+                  {service.image ? (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="aspect-[4/3] w-full rounded-xl sm:rounded-2xl object-cover"
+                    />
+                  ) : (
+                    <div className="aspect-[4/3] rounded-xl sm:rounded-2xl bg-muted border-2 border-dashed border-border flex items-center justify-center">
+                      <span className="text-muted-foreground text-sm sm:text-base">
+                        Image Placeholder
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
