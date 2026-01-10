@@ -1,5 +1,6 @@
 import burstPipesImg from "@/assets/burst-pipes.png";
 import blockedDrainsImg from "@/assets/blocked-drains.png";
+import boilerIssuesImg from "@/assets/boiler-issues.png";
 
 const services = [
   {
@@ -33,7 +34,7 @@ const services = [
       "Pressure problems and leaking boilers",
       "Full replacements for severely damaged units",
     ],
-    image: null,
+    image: boilerIssuesImg,
   },
   {
     title: "Drain Clearance & Maintenance",
