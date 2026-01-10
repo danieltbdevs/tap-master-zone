@@ -35,10 +35,11 @@ const AboutSection = () => {
               the surrounding areas.
             </p>
 
-            <Button variant="emergency" size="lg" className="w-full sm:w-auto gap-2 min-h-[48px]" asChild>
+            <Button variant="emergency" size="lg" className="w-full sm:w-auto gap-2 min-h-[48px] text-sm sm:text-base px-4 sm:px-6" asChild>
               <a href="tel:+441234567890">
-                <Phone className="h-5 w-5" />
-                <span className="font-bold">PLEASE CALL US FOR EMERGENCY SERVICE</span>
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                <span className="font-bold hidden sm:inline">PLEASE CALL US FOR EMERGENCY SERVICE</span>
+                <span className="font-bold sm:hidden">CALL FOR EMERGENCY</span>
               </a>
             </Button>
 
