@@ -162,7 +162,7 @@ const Footer = () => {
                   <a 
                     key={link.label}
                     href={link.href} 
-                    className="text-sm text-emergency-red hover:text-red-400 transition-colors py-0.5"
+                    className="text-sm text-gray-400 hover:text-white transition-colors py-0.5"
                   >
                     {link.label}
                   </a>
