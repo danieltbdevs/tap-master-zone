@@ -1,6 +1,7 @@
 import burstPipesImg from "@/assets/burst-pipes.png";
 import blockedDrainsImg from "@/assets/blocked-drains.png";
 import boilerIssuesImg from "@/assets/boiler-issues.png";
+import drainClearanceImg from "@/assets/drain-clearance.png";
 
 const services = [
   {
@@ -45,7 +46,7 @@ const services = [
       "Providing scheduled maintenance plans for properties",
       "Routine drain cleaning to prevent blockages",
     ],
-    image: null,
+    image: drainClearanceImg,
   },
   {
     title: "Leaking Taps & Toilets",
