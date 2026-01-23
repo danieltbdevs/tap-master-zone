@@ -81,12 +81,20 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Image - responsive aspect ratio instead of fixed height */}
-          <div className="order-2 lg:order-2">
-            <div className="relative">
-              
-            </div>
-          </div>
+{/* Right Image - responsive aspect ratio with decorative glow */}
+<div className="order-2 lg:order-2">
+  <div className="relative mt-8 lg:mt-0">
+    <div className="relative z-10">
+      <img 
+        src={plumberHero} 
+        alt="Professional Plumber" 
+        className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl" 
+      />
+    </div>
+    {/* Decorative gradient blur glow effect */}
+    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl blur-3xl -z-10" />
+  </div>
+</div>
         </div>
       </div>
     </section>;
