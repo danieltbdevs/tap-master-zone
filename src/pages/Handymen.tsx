@@ -11,7 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import technicianHero from "@/assets/technician-hero.png";
+import handymanHero from "@/assets/handyman-hero.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -192,7 +192,7 @@ const Handymen = () => {
             <div className="relative mt-8 lg:mt-0">
               <div className="relative z-10">
                 <img
-                  src={technicianHero}
+                  src={handymanHero}
                   alt="Professional Handyman"
                   className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl"
                 />
@@ -333,7 +333,7 @@ const Handymen = () => {
             <div className="relative order-2 lg:order-1">
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
                 <img
-                  src={technicianHero}
+                  src={handymanHero}
                   alt="T&G Services Handyman Team"
                   className="w-full aspect-[4/3] object-cover"
                 />
