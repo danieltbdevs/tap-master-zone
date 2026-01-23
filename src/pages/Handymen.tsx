@@ -336,7 +336,7 @@ const Handymen = () => {
       <section className="py-12 sm:py-16 lg:py-28">
         <div className="container px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-            <div className="relative order-2 lg:order-1">
+            <div className="relative order-2 lg:order-2">
           <div className="relative z-10">
             <img
               src={handymanHero}
@@ -351,7 +351,7 @@ const Handymen = () => {
               </div>
             </div>
 
-            <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+            <div className="space-y-4 sm:space-y-6 order-1 lg:order-1">
               <span className="inline-block text-xs sm:text-sm font-semibold text-emergency-red uppercase tracking-wider">
                 About Us
               </span>
