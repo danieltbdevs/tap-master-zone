@@ -1,4 +1,4 @@
-import { Star, BadgeCheck } from "lucide-react";
+import { Star, BadgeCheck, Truck } from "lucide-react";
 
 const testimonials = [
   {
@@ -66,11 +66,9 @@ const TestimonialsSection = () => {
               {/* Header with Avatar, Name, Time, and Google Icon */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                    <Truck className="w-6 h-6 text-primary-foreground" />
+                  </div>
                   <div>
                     <h3 className="font-bold text-foreground">{testimonial.name}</h3>
                     <p className="text-sm text-muted-foreground">{testimonial.timeAgo}</p>
