@@ -165,7 +165,7 @@ const CallbackFormSection = () => {
                   <SelectTrigger className="h-11 sm:h-12 bg-secondary/50 border-border text-sm sm:text-base">
                     <SelectValue placeholder="Choose a service..." />
                   </SelectTrigger>
-                  <SelectContent className="bg-popover border-border z-50">
+                  <SelectContent className="bg-zinc-900 border-zinc-700 text-white z-[100]">
                     <SelectItem value="home-repairs">Home Repairs</SelectItem>
                     <SelectItem value="furniture-assembly">Furniture Assembly</SelectItem>
                     <SelectItem value="painting-decorating">Painting & Decorating</SelectItem>
