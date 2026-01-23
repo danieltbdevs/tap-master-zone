@@ -17,6 +17,7 @@ import furnitureAssemblyImg from "@/assets/furniture-assembly.png";
 import paintingDecoratingImg from "@/assets/painting-decorating.png";
 import doorsWindowsImg from "@/assets/doors-windows.png";
 import flooringImg from "@/assets/flooring.png";
+import gardenOutdoorImg from "@/assets/garden-outdoor.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -54,7 +55,7 @@ const handymanServices = [
     title: "Garden & Outdoor",
     description: "Keep your outdoor spaces in top condition with our garden maintenance and repair services.",
     bullets: ["Fence repairs & installation", "Shed assembly", "Decking repairs", "Outdoor maintenance"],
-    image: "/placeholder.svg",
+    image: gardenOutdoorImg,
   },
 ];
 
