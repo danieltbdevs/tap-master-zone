@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import handymanHero from "@/assets/handyman-hero.png";
 import homeRepairsImg from "@/assets/home-repairs.png";
+import furnitureAssemblyImg from "@/assets/furniture-assembly.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -26,7 +27,7 @@ const handymanServices = [
     title: "Furniture Assembly",
     description: "Save time and frustration with our expert flat-pack furniture assembly service for any brand or complexity.",
     bullets: ["Flat-pack assembly", "Wardrobes & storage units", "Beds & bedroom furniture", "Office desks & chairs"],
-    image: "/placeholder.svg",
+    image: furnitureAssemblyImg,
   },
   {
     title: "Painting & Decorating",
