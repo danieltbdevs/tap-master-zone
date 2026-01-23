@@ -65,7 +65,7 @@ const HeroSection = () => {
 
             {/* Trust badges - pill style matching Handymen page */}
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
-              {["Gas Safe Registered", "Fully Insured", "Same-Day Service"].map(badge => <span key={badge} className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary text-[10px] sm:text-xs font-medium">
+              {["Gas Safe Registered", "Fully Insured", "Same-Day Service"].map(badge => <span key={badge} className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary text-[10px] sm:text-xs font-medium text-white">
                   <CheckCircle className="w-3 h-3 text-emergency-red" />
                   {badge}
                 </span>)}
