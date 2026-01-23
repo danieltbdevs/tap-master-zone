@@ -5,12 +5,7 @@ import CallbackFormSection from "@/components/CallbackFormSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Star, Shield, Clock, CheckCircle, MapPin, BadgeCheck, PoundSterling, Zap, Wrench } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import handymanHero from "@/assets/handyman-hero.png";
 import homeRepairsImg from "@/assets/home-repairs.png";
 import furnitureAssemblyImg from "@/assets/furniture-assembly.png";
@@ -20,119 +15,90 @@ import flooringImg from "@/assets/flooring.png";
 import gardenOutdoorImg from "@/assets/garden-outdoor.png";
 
 // Handyman Services Data
-const handymanServices = [
-  {
-    title: "Home Repairs",
-    description: "From squeaky doors to broken fixtures, we handle all general household repairs quickly and professionally.",
-    bullets: ["Door adjustments & repairs", "Lock repairs & replacements", "Shelving installation", "General household fixes"],
-    image: homeRepairsImg,
-  },
-  {
-    title: "Furniture Assembly",
-    description: "Save time and frustration with our expert flat-pack furniture assembly service for any brand or complexity.",
-    bullets: ["Flat-pack assembly", "Wardrobes & storage units", "Beds & bedroom furniture", "Office desks & chairs"],
-    image: furnitureAssemblyImg,
-  },
-  {
-    title: "Painting & Decorating",
-    description: "Transform your space with our professional painting and decorating services for any room in your home.",
-    bullets: ["Interior wall painting", "Touch-ups & repairs", "Feature walls", "Wallpaper hanging"],
-    image: paintingDecoratingImg,
-  },
-  {
-    title: "Flooring Installation",
-    description: "Expert flooring installation and repairs to give your home a fresh, updated look.",
-    bullets: ["Laminate flooring", "Vinyl & LVT installation", "Floor repairs", "Threshold & trim fitting"],
-    image: flooringImg,
-  },
-  {
-    title: "Doors & Windows",
-    description: "Professional door and window services to improve security, efficiency, and appearance of your property.",
-    bullets: ["Door hanging & fitting", "Lock installation", "Draught-proofing", "Handle replacements"],
-    image: doorsWindowsImg,
-  },
-  {
-    title: "Garden & Outdoor",
-    description: "Keep your outdoor spaces in top condition with our garden maintenance and repair services.",
-    bullets: ["Fence repairs & installation", "Shed assembly", "Decking repairs", "Outdoor maintenance"],
-    image: gardenOutdoorImg,
-  },
-];
+const handymanServices = [{
+  title: "Home Repairs",
+  description: "From squeaky doors to broken fixtures, we handle all general household repairs quickly and professionally.",
+  bullets: ["Door adjustments & repairs", "Lock repairs & replacements", "Shelving installation", "General household fixes"],
+  image: homeRepairsImg
+}, {
+  title: "Furniture Assembly",
+  description: "Save time and frustration with our expert flat-pack furniture assembly service for any brand or complexity.",
+  bullets: ["Flat-pack assembly", "Wardrobes & storage units", "Beds & bedroom furniture", "Office desks & chairs"],
+  image: furnitureAssemblyImg
+}, {
+  title: "Painting & Decorating",
+  description: "Transform your space with our professional painting and decorating services for any room in your home.",
+  bullets: ["Interior wall painting", "Touch-ups & repairs", "Feature walls", "Wallpaper hanging"],
+  image: paintingDecoratingImg
+}, {
+  title: "Flooring Installation",
+  description: "Expert flooring installation and repairs to give your home a fresh, updated look.",
+  bullets: ["Laminate flooring", "Vinyl & LVT installation", "Floor repairs", "Threshold & trim fitting"],
+  image: flooringImg
+}, {
+  title: "Doors & Windows",
+  description: "Professional door and window services to improve security, efficiency, and appearance of your property.",
+  bullets: ["Door hanging & fitting", "Lock installation", "Draught-proofing", "Handle replacements"],
+  image: doorsWindowsImg
+}, {
+  title: "Garden & Outdoor",
+  description: "Keep your outdoor spaces in top condition with our garden maintenance and repair services.",
+  bullets: ["Fence repairs & installation", "Shed assembly", "Decking repairs", "Outdoor maintenance"],
+  image: gardenOutdoorImg
+}];
 
 // Handyman Features Data
-const handymanFeatures = [
-  {
-    icon: Clock,
-    title: "Same-Day Availability",
-    description: "Flexible scheduling to fit your busy lifestyle",
-  },
-  {
-    icon: Shield,
-    title: "Experienced Professionals",
-    description: "Skilled handymen with years of experience",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Multi-Skilled Technicians",
-    description: "One call covers all your property needs",
-  },
-  {
-    icon: PoundSterling,
-    title: "Transparent Pricing",
-    description: "No hidden fees, no surprises – honest quotes",
-  },
-  {
-    icon: Zap,
-    title: "Flexible Scheduling",
-    description: "Book at times that work for you",
-  },
-  {
-    icon: Star,
-    title: "5-Star Reviews",
-    description: "Trusted by 200+ local homeowners",
-  },
-];
+const handymanFeatures = [{
+  icon: Clock,
+  title: "Same-Day Availability",
+  description: "Flexible scheduling to fit your busy lifestyle"
+}, {
+  icon: Shield,
+  title: "Experienced Professionals",
+  description: "Skilled handymen with years of experience"
+}, {
+  icon: BadgeCheck,
+  title: "Multi-Skilled Technicians",
+  description: "One call covers all your property needs"
+}, {
+  icon: PoundSterling,
+  title: "Transparent Pricing",
+  description: "No hidden fees, no surprises – honest quotes"
+}, {
+  icon: Zap,
+  title: "Flexible Scheduling",
+  description: "Book at times that work for you"
+}, {
+  icon: Star,
+  title: "5-Star Reviews",
+  description: "Trusted by 200+ local homeowners"
+}];
 
 // Handyman FAQs
-const handymanFaqs = [
-  {
-    question: "What types of jobs do you handle?",
-    answer: "We handle all property maintenance and repair tasks including home repairs, furniture assembly, painting & decorating, flooring installation, door & window fitting, and garden maintenance. No job is too small or too big for our experienced team.",
-  },
-  {
-    question: "Do you provide your own tools and materials?",
-    answer: "Yes, our handymen arrive fully equipped with professional tools and a well-stocked van. For specific materials like paint colours or flooring types, we can either source them for you or you can provide your preferred materials.",
-  },
-  {
-    question: "How do I get a quote?",
-    answer: "Getting a quote is easy! Simply call us or fill out our callback form with details of your job. For most jobs, we can provide an accurate quote over the phone. For larger projects, we'll arrange a free on-site assessment.",
-  },
-  {
-    question: "Can you work on commercial properties?",
-    answer: "Absolutely! We serve both residential and commercial clients throughout Peterborough. Whether it's office repairs, retail maintenance, or property management support, we've got you covered.",
-  },
-  {
-    question: "What areas do you cover?",
-    answer: "We cover all of Peterborough and surrounding areas including Werrington, Hampton, Bretton, Orton, Stanground, Fletton, Woodston, Longthorpe, Castor, Eye, and Yaxley. Not sure if we cover your area? Just call to confirm.",
-  },
-];
+const handymanFaqs = [{
+  question: "What types of jobs do you handle?",
+  answer: "We handle all property maintenance and repair tasks including home repairs, furniture assembly, painting & decorating, flooring installation, door & window fitting, and garden maintenance. No job is too small or too big for our experienced team."
+}, {
+  question: "Do you provide your own tools and materials?",
+  answer: "Yes, our handymen arrive fully equipped with professional tools and a well-stocked van. For specific materials like paint colours or flooring types, we can either source them for you or you can provide your preferred materials."
+}, {
+  question: "How do I get a quote?",
+  answer: "Getting a quote is easy! Simply call us or fill out our callback form with details of your job. For most jobs, we can provide an accurate quote over the phone. For larger projects, we'll arrange a free on-site assessment."
+}, {
+  question: "Can you work on commercial properties?",
+  answer: "Absolutely! We serve both residential and commercial clients throughout Peterborough. Whether it's office repairs, retail maintenance, or property management support, we've got you covered."
+}, {
+  question: "What areas do you cover?",
+  answer: "We cover all of Peterborough and surrounding areas including Werrington, Hampton, Bretton, Orton, Stanground, Fletton, Woodston, Longthorpe, Castor, Eye, and Yaxley. Not sure if we cover your area? Just call to confirm."
+}];
 
 // Handyman Service Areas
 const areas = ["Peterborough City Centre", "Werrington", "Hampton", "Bretton", "Orton", "Stanground", "Fletton", "Woodston", "Longthorpe", "Castor", "Eye", "Yaxley"];
 
 // About Section Services List
-const aboutServices = [
-  "Home Repairs",
-  "Furniture Assembly", 
-  "Painting & Decorating",
-  "Flooring Installation",
-  "Doors & Windows",
-  "Garden & Outdoor",
-];
-
+const aboutServices = ["Home Repairs", "Furniture Assembly", "Painting & Decorating", "Flooring Installation", "Doors & Windows", "Garden & Outdoor"];
 const Handymen = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -170,15 +136,11 @@ const Handymen = () => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4 sm:pt-6">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-emergency-red to-red-700 border-2 border-background" />
-                    ))}
+                    {[1, 2, 3, 4].map(i => <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-emergency-red to-red-700 border-2 border-background" />)}
                   </div>
                   <div className="text-xs sm:text-sm">
                     <div className="flex text-yellow-400">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />)}
                     </div>
                     <span className="text-muted-foreground">200+ Reviews</span>
                   </div>
@@ -186,22 +148,16 @@ const Handymen = () => {
               </div>
 
               <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start pt-2">
-                {["Vetted & Insured", "Fully Insured", "Same-Day Service"].map((badge) => (
-                  <span key={badge} className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary text-[10px] sm:text-xs font-medium">
+                {["Vetted & Insured", "Fully Insured", "Same-Day Service"].map(badge => <span key={badge} className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary text-[10px] sm:text-xs font-medium">
                     <CheckCircle className="w-3 h-3 text-emergency-red" />
                     {badge}
-                  </span>
-                ))}
+                  </span>)}
               </div>
             </div>
 
             <div className="relative mt-8 lg:mt-0">
               <div className="relative z-10">
-                <img
-                  src={handymanHero}
-                  alt="Professional Handyman"
-                  className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl"
-                />
+                <img src={handymanHero} alt="Professional Handyman" className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl" />
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-emergency-red/20 to-transparent rounded-3xl blur-3xl -z-10" />
             </div>
@@ -225,20 +181,10 @@ const Handymen = () => {
           </div>
 
           <div className="space-y-12 sm:space-y-16 lg:space-y-24">
-            {handymanServices.map((service, index) => (
-              <div
-                key={index}
-                className={`grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
-              >
+            {handymanServices.map((service, index) => <div key={index} className={`grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full aspect-[4/3] object-cover"
-                    />
+                    <img src={service.image} alt={service.title} className="w-full aspect-[4/3] object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
                 </div>
@@ -251,14 +197,12 @@ const Handymen = () => {
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">{service.title}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground">{service.description}</p>
                   <ul className="space-y-2 sm:space-y-3">
-                    {service.bullets.map((bullet, bulletIndex) => (
-                      <li key={bulletIndex} className="flex items-center gap-2 sm:gap-3">
+                    {service.bullets.map((bullet, bulletIndex) => <li key={bulletIndex} className="flex items-center gap-2 sm:gap-3">
                         <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emergency-red/10 flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-emergency-red" />
                         </div>
                         <span className="text-sm sm:text-base">{bullet}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                   <Button variant="emergency" className="mt-2 text-sm sm:text-base" asChild>
                     <a href="tel:01onal234567890">
@@ -267,8 +211,7 @@ const Handymen = () => {
                     </a>
                   </Button>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -291,8 +234,7 @@ const Handymen = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                {handymanFeatures.map((feature, index) => (
-                  <div key={index} className="flex gap-3 sm:gap-4">
+                {handymanFeatures.map((feature, index) => <div key={index} className="flex gap-3 sm:gap-4">
                     <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-emergency-red/10 flex items-center justify-center">
                       <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-emergency-red" />
                     </div>
@@ -300,8 +242,7 @@ const Handymen = () => {
                       <h3 className="font-semibold text-sm sm:text-base mb-0.5 sm:mb-1">{feature.title}</h3>
                       <p className="text-xs sm:text-sm text-muted-foreground">{feature.description}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -338,11 +279,7 @@ const Handymen = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="relative order-2 lg:order-2">
           <div className="relative z-10">
-            <img
-              src={handymanHero}
-              alt="T&G Services Handyman Team"
-              className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl"
-            />
+            <img alt="T&G Services Handyman Team" className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl" src="/lovable-uploads/ebb75191-461a-43d8-b47e-21f6d1cb3bd6.png" />
           </div>
           <div className="absolute -inset-4 bg-gradient-to-r from-emergency-red/20 to-transparent rounded-3xl blur-3xl -z-10" />
               <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
@@ -378,12 +315,10 @@ const Handymen = () => {
               <div className="pt-4 sm:pt-6">
                 <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Our Handyman Services Include:</h3>
                 <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                  {aboutServices.map((service, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                  {aboutServices.map((service, index) => <div key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-emergency-red flex-shrink-0" />
                       <span className="text-xs sm:text-sm">{service}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -419,12 +354,10 @@ const Handymen = () => {
 
               <div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
-                  {areas.map((area, index) => (
-                    <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-secondary/50 rounded-lg px-3 sm:px-4 py-2 sm:py-3">
+                  {areas.map((area, index) => <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-secondary/50 rounded-lg px-3 sm:px-4 py-2 sm:py-3">
                       <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emergency-red flex-shrink-0" />
                       <span className="text-xs sm:text-sm">{area}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -437,25 +370,12 @@ const Handymen = () => {
               </h3>
             </div>
             <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-border">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77766.98663990066!2d-0.3047699!3d52.5695235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877f055400b0de5%3A0x9c99c869d3e6823!2sPeterborough%2C%20UK!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Peterborough Service Area Map"
-                className="w-full sm:h-[400px]"
-              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77766.98663990066!2d-0.3047699!3d52.5695235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877f055400b0de5%3A0x9c99c869d3e6823!2sPeterborough%2C%20UK!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus" width="100%" height="300" style={{
+              border: 0
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Peterborough Service Area Map" className="w-full sm:h-[400px]" />
             </div>
             <div className="mt-3 sm:mt-4 text-center">
-              <a
-                href="https://www.google.com/maps/place/Peterborough,+UK"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline text-xs sm:text-sm font-medium"
-              >
+              <a href="https://www.google.com/maps/place/Peterborough,+UK" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-xs sm:text-sm font-medium">
                 View larger map
               </a>
             </div>
@@ -480,20 +400,14 @@ const Handymen = () => {
             </div>
 
             <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
-              {handymanFaqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="glass-card rounded-xl sm:rounded-2xl px-4 sm:px-6 border-0"
-                >
+              {handymanFaqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="glass-card rounded-xl sm:rounded-2xl px-4 sm:px-6 border-0">
                   <AccordionTrigger className="text-left text-sm sm:text-base font-semibold hover:no-underline py-4 sm:py-6">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-6">
                     {faq.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>
@@ -501,8 +415,6 @@ const Handymen = () => {
 
       <CallbackFormSection />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Handymen;
