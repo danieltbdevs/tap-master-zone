@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import handymanHero from "@/assets/handyman-hero.png";
+import homeRepairsImg from "@/assets/home-repairs.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -19,7 +20,7 @@ const handymanServices = [
     title: "Home Repairs",
     description: "From squeaky doors to broken fixtures, we handle all general household repairs quickly and professionally.",
     bullets: ["Door adjustments & repairs", "Lock repairs & replacements", "Shelving installation", "General household fixes"],
-    image: "/placeholder.svg",
+    image: homeRepairsImg,
   },
   {
     title: "Furniture Assembly",
