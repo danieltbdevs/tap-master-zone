@@ -343,7 +343,7 @@ const Handymen = () => {
                   alt="T&G Services Handyman Team"
                   className="w-full aspect-[4/3] object-cover"
                 />
-                <div className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl font-black text-emergency-red">10+</div>
