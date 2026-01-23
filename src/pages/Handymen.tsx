@@ -16,6 +16,7 @@ import homeRepairsImg from "@/assets/home-repairs.png";
 import furnitureAssemblyImg from "@/assets/furniture-assembly.png";
 import paintingDecoratingImg from "@/assets/painting-decorating.png";
 import doorsWindowsImg from "@/assets/doors-windows.png";
+import flooringImg from "@/assets/flooring.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -41,7 +42,7 @@ const handymanServices = [
     title: "Flooring Installation",
     description: "Expert flooring installation and repairs to give your home a fresh, updated look.",
     bullets: ["Laminate flooring", "Vinyl & LVT installation", "Floor repairs", "Threshold & trim fitting"],
-    image: "/placeholder.svg",
+    image: flooringImg,
   },
   {
     title: "Doors & Windows",
