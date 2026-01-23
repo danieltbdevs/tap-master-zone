@@ -14,6 +14,7 @@ import {
 import handymanHero from "@/assets/handyman-hero.png";
 import homeRepairsImg from "@/assets/home-repairs.png";
 import furnitureAssemblyImg from "@/assets/furniture-assembly.png";
+import paintingDecoratingImg from "@/assets/painting-decorating.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -33,7 +34,7 @@ const handymanServices = [
     title: "Painting & Decorating",
     description: "Transform your space with our professional painting and decorating services for any room in your home.",
     bullets: ["Interior wall painting", "Touch-ups & repairs", "Feature walls", "Wallpaper hanging"],
-    image: "/placeholder.svg",
+    image: paintingDecoratingImg,
   },
   {
     title: "Flooring Installation",
