@@ -40,7 +40,7 @@ const HeroSection = () => {
                   Call Now – 24/7
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px] border-2" asChild>
+              <Button variant="outline" size="lg" className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px] border-2 border-white/50 text-white hover:bg-white/10" asChild>
                 <a href="#callback-form">
                   Request Callback
                 </a>
