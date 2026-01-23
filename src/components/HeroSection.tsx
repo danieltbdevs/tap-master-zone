@@ -35,7 +35,7 @@ const HeroSection = () => {
             {/* CTAs - 44px+ touch targets */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button className="bg-emergency-red hover:bg-emergency-red/90 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px]" asChild>
-                <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+441234567890">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now – 24/7
                 </a>

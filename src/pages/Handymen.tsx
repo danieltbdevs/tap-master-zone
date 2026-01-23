@@ -122,7 +122,7 @@ const Handymen = () => {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                 <Button variant="emergency" size="lg" className="group px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg" asChild>
-                  <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+                  <a href="tel:01onal234567890">
                     <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                     <span className="sm:hidden">CALL NOW</span>
                     <span className="hidden sm:inline">CALL FOR SERVICE</span>
@@ -205,7 +205,7 @@ const Handymen = () => {
                       </li>)}
                   </ul>
                   <Button variant="emergency" className="mt-2 text-sm sm:text-base" asChild>
-                    <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+                    <a href="tel:01onal234567890">
                       <Phone className="w-4 h-4 mr-2" />
                       Book This Service
                     </a>
@@ -305,7 +305,7 @@ const Handymen = () => {
               </div>
 
               <Button variant="emergency" size="lg" className="px-6 sm:px-8" asChild>
-                <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+                <a href="tel:01234567890">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span className="sm:hidden">CALL NOW</span>
                   <span className="hidden sm:inline">CALL FOR SERVICE</span>

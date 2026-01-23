@@ -44,13 +44,13 @@ const Footer = () => {
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
               <Button variant="hero" size="xl" className="w-full sm:w-auto min-h-[48px]" asChild>
-                <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+441234567890">
                   <Phone className="w-5 h-5" />
-                  +233 24 078 6039
+                  01234 567 890
                 </a>
               </Button>
               <Button size="xl" className="w-full sm:w-auto min-h-[48px] bg-[#25D366] hover:bg-[#1ebe5a] text-white" asChild>
-                <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/441234567890" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Us
                 </a>
@@ -120,9 +120,9 @@ const Footer = () => {
             <div className="space-y-4 col-span-2 lg:col-span-1">
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Contact Us</h4>
               <div className="space-y-3">
-                <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors py-1">
+                <a href="tel:+441234567890" className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors py-1">
                   <Phone className="w-4 h-4 text-emergency-red flex-shrink-0" />
-                  <span>+233 24 078 6039</span>
+                  <span>01234 567 890</span>
                 </a>
                 <a href="mailto:help@peterboroughplumbers.co.uk" className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors py-1">
                   <Mail className="w-4 h-4 text-emergency-red flex-shrink-0" />

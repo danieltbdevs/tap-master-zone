@@ -20,7 +20,7 @@ const NotFound = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="hero" size="lg" asChild>
-            <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
+            <a href="tel:+441234567890">
               <Phone className="w-5 h-5" />
               Call Now – 24/7
             </a>
