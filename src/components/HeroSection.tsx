@@ -1,4 +1,4 @@
-import { Phone, Star, CheckCircle } from "lucide-react";
+import { Phone, Star, CheckCircle, MessageSquare, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import technicianVan from "@/assets/technician-van.png";
 const HeroSection = () => {
@@ -42,6 +42,7 @@ const HeroSection = () => {
               </Button>
               <Button variant="outline" size="lg" className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px] border-2 border-white/50 text-white hover:bg-white/10" asChild>
                 <a href="#callback-form">
+                  <MessageSquare className="w-5 h-5 mr-2" />
                   Request Callback
                 </a>
               </Button>
@@ -63,12 +64,20 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Trust badges - pill style matching Handymen page */}
+            {/* Trust badges - pill style with specific icons */}
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
-              {["Gas Safe Registered", "Fully Insured", "Same-Day Service"].map(badge => <span key={badge} className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary text-[10px] sm:text-xs font-medium text-white">
-                  <CheckCircle className="w-3 h-3 text-emergency-red" />
-                  {badge}
-                </span>)}
+              <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-secondary text-xs sm:text-sm font-medium text-white">
+                <Shield className="w-4 h-4 text-emergency-red" />
+                Gas Safe Registered
+              </span>
+              <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-secondary text-xs sm:text-sm font-medium text-white">
+                <CheckCircle className="w-4 h-4 text-emergency-red" />
+                Fully Insured
+              </span>
+              <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-secondary text-xs sm:text-sm font-medium text-white">
+                <Clock className="w-4 h-4 text-emergency-red" />
+                Same-Day Response
+              </span>
             </div>
           </div>
 
