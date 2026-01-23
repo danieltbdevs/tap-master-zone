@@ -15,6 +15,7 @@ import handymanHero from "@/assets/handyman-hero.png";
 import homeRepairsImg from "@/assets/home-repairs.png";
 import furnitureAssemblyImg from "@/assets/furniture-assembly.png";
 import paintingDecoratingImg from "@/assets/painting-decorating.png";
+import doorsWindowsImg from "@/assets/doors-windows.png";
 
 // Handyman Services Data
 const handymanServices = [
@@ -46,7 +47,7 @@ const handymanServices = [
     title: "Doors & Windows",
     description: "Professional door and window services to improve security, efficiency, and appearance of your property.",
     bullets: ["Door hanging & fitting", "Lock installation", "Draught-proofing", "Handle replacements"],
-    image: "/placeholder.svg",
+    image: doorsWindowsImg,
   },
   {
     title: "Garden & Outdoor",
