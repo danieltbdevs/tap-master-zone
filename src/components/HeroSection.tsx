@@ -4,9 +4,9 @@ import technicianVan from "@/assets/technician-van.png";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center py-12 sm:py-16 lg:py-20 overflow-hidden">
-      {/* Subtle gradient background matching Handymen page */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
+    <section id="hero" className="relative min-h-[90vh] flex items-center py-12 sm:py-16 lg:py-20 overflow-hidden bg-black">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-secondary/20" />
       
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
