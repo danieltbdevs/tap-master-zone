@@ -279,7 +279,7 @@ const Handymen = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="relative order-2 lg:order-2">
           <div className="relative z-10">
-            <img alt="T&G Services Handyman Team" className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl" src="/lovable-uploads/ebb75191-461a-43d8-b47e-21f6d1cb3bd6.png" />
+            <img alt="T&G Services Handyman Team" className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl" src="/lovable-uploads/e95bdcb1-ac3f-4032-ab7f-d6a8d5c13c58.png" />
           </div>
           <div className="absolute -inset-4 bg-gradient-to-r from-emergency-red/20 to-transparent rounded-3xl blur-3xl -z-10" />
               <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
