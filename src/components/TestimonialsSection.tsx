@@ -1,4 +1,5 @@
-import { Star, BadgeCheck, Truck } from "lucide-react";
+import { Star, BadgeCheck } from "lucide-react";
+import truckAvatar from "@/assets/truck-avatar.png";
 
 const testimonials = [
   {
@@ -74,9 +75,11 @@ const TestimonialsSection = () => {
                     </div>
                   )}
                   {testimonial.avatarType === "truck" && (
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                      <Truck className="w-6 h-6 text-primary-foreground" />
-                    </div>
+                    <img
+                      src={truckAvatar}
+                      alt="Truck"
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
                   )}
                   {testimonial.avatarType === "image" && (
                     <img
