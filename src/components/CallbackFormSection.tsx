@@ -3,6 +3,13 @@ import { Phone, Loader2, Upload, X, ImageIcon, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 interface UploadedFile {
@@ -14,6 +21,7 @@ interface UploadedFile {
 const CallbackFormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
+  const [selectedService, setSelectedService] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
@@ -83,6 +91,7 @@ const CallbackFormSection = () => {
     // Clean up previews
     uploadedFiles.forEach((file) => URL.revokeObjectURL(file.preview));
     setUploadedFiles([]);
+    setSelectedService("");
     
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
@@ -146,6 +155,29 @@ const CallbackFormSection = () => {
                   placeholder="PE1 1AA"
                   className="h-11 sm:h-12 bg-secondary/50 border-border text-sm sm:text-base"
                 />
+              </div>
+
+              <div className="space-y-1.5 sm:space-y-2">
+                <label htmlFor="service" className="text-xs sm:text-sm font-medium">
+                  Select Service
+                </label>
+                <Select value={selectedService} onValueChange={setSelectedService}>
+                  <SelectTrigger className="h-11 sm:h-12 bg-secondary/50 border-border text-sm sm:text-base">
+                    <SelectValue placeholder="Choose a service..." />
+                  </SelectTrigger>
+                  <SelectContent className="bg-popover border-border z-50">
+                    <SelectItem value="home-repairs">Home Repairs</SelectItem>
+                    <SelectItem value="furniture-assembly">Furniture Assembly</SelectItem>
+                    <SelectItem value="painting-decorating">Painting & Decorating</SelectItem>
+                    <SelectItem value="flooring-installation">Flooring Installation</SelectItem>
+                    <SelectItem value="doors-windows">Doors & Windows</SelectItem>
+                    <SelectItem value="garden-outdoor">Garden & Outdoor</SelectItem>
+                    <SelectItem value="tv-mounting">TV Mounting & Installation</SelectItem>
+                    <SelectItem value="shelving-storage">Shelving & Storage</SelectItem>
+                    <SelectItem value="plumbing-repairs">Plumbing Repairs</SelectItem>
+                    <SelectItem value="general-maintenance">General Maintenance</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="space-y-1.5 sm:space-y-2">
