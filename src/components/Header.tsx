@@ -60,7 +60,7 @@ const Header = () => {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Desktop CTA - visible at md and up */}
             <Button variant="hero" size="sm" className="hidden md:flex min-h-[44px]" asChild>
-              <a href="tel:+441234567890">
+              <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
                 <Phone className="w-4 h-4" />
                 Call Now
               </a>
@@ -92,7 +92,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="hero" className="w-full mt-3 min-h-[48px]" asChild>
-                <a href="tel:+441234567890">
+                <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4" />
                   Call Now – 24/7
                 </a>
