@@ -149,7 +149,7 @@ const Handymen = () => {
                   <span className="text-gradient block">Professional Handymen</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                  Reliable property maintenance and repairs – no job too small or too big.
+                  Reliable property maintenance and repairs – no job is too small or too big.
                 </p>
               </div>
 
