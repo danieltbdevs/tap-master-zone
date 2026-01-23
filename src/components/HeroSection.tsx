@@ -1,13 +1,15 @@
-import { Phone, Star, BadgeCheck } from "lucide-react";
+import { Phone, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import plumberHero from "@/assets/plumber-hero-action.png";
+import technicianVan from "@/assets/technician-van.png";
+
 const HeroSection = () => {
-  return <section className="relative lg:min-h-screen flex items-center overflow-hidden bg-[#0B0C10]">
-      {/* Background gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0B0C10] via-[#0B0C10] to-[#1a0a0a]" />
+  return (
+    <section id="hero" className="relative min-h-[90vh] flex items-center py-12 sm:py-16 lg:py-20 overflow-hidden">
+      {/* Subtle gradient background matching Handymen page */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
       
-      <div className="container relative z-10 py-8 lg:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center shadow-2xl lg:py-0">
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left Content - Shows first on mobile */}
           <div className="space-y-6 lg:space-y-8 fade-in order-1 lg:order-1 pt-4 lg:pt-0">
             {/* Tagline */}
@@ -40,7 +42,7 @@ const HeroSection = () => {
                   Call Now – 24/7
                 </a>
               </Button>
-              <Button className="border-2 border-gray-700 bg-transparent hover:bg-gray-800/50 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px]" asChild>
+              <Button variant="outline" size="lg" className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px] border-2" asChild>
                 <a href="#callback-form">
                   Request Callback
                 </a>
@@ -50,9 +52,11 @@ const HeroSection = () => {
             {/* Social Proof Row */}
             <div className="flex items-center gap-3 sm:gap-4 pt-2">
               <div className="flex -space-x-2">
-              {[...Array(4)].map((_, i) => <div key={i} className="w-10 h-10 rounded-full bg-emergency-red border-2 border-[#0B0C10] flex items-center justify-center">
-                    <span className="text-xs text-white font-semibold">{['JD', 'MK', 'RS', 'AL'][i]}</span>
-                  </div>)}
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-emergency-red to-red-700 border-2 border-background flex items-center justify-center">
+                    <span className="text-[10px] sm:text-xs text-white font-semibold">{['JD', 'MK', 'RS', 'AL'][i]}</span>
+                  </div>
+                ))}
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
@@ -63,39 +67,35 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Trust badges - simple text with checkmarks */}
-            <div className="flex flex-wrap gap-6 sm:gap-8 pt-4">
-              <div className="flex items-center gap-2">
-                <BadgeCheck className="w-5 h-5 text-emergency-red" />
-                <span className="text-sm text-white">Gas Safe Registered</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BadgeCheck className="w-5 h-5 text-emergency-red" />
-                <span className="text-sm text-white">Fully Insured</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BadgeCheck className="w-5 h-5 text-emergency-red" />
-                <span className="text-sm text-white">Same-Day Response</span>
-              </div>
+            {/* Trust badges - pill style matching Handymen page */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
+              {["Gas Safe Registered", "Fully Insured", "Same-Day Service"].map((badge) => (
+                <span key={badge} className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary text-[10px] sm:text-xs font-medium">
+                  <CheckCircle className="w-3 h-3 text-emergency-red" />
+                  {badge}
+                </span>
+              ))}
             </div>
           </div>
 
-          {/* Right Image - with decorative red glow */}
+          {/* Right Image - with wrapping glow effect like Handymen page */}
           <div className="order-2 lg:order-2">
             <div className="relative mt-8 lg:mt-0">
-              {/* Red glow effect on left side of image */}
-              <div className="absolute -left-8 top-1/4 bottom-1/4 w-24 bg-gradient-to-r from-emergency-red/40 to-transparent blur-3xl" />
               <div className="relative z-10">
                 <img 
-                  src={plumberHero} 
-                  alt="Professional Plumber" 
-                  className="w-full max-w-lg mx-auto lg:max-w-none rounded-2xl object-cover" 
+                  src={technicianVan} 
+                  alt="Professional Technician with Service Van" 
+                  className="w-full max-w-md mx-auto lg:max-w-none rounded-2xl" 
                 />
               </div>
+              {/* Glow effect wrapping around image */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-emergency-red/20 to-transparent rounded-3xl blur-3xl -z-10" />
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
