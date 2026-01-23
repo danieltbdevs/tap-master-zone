@@ -5,18 +5,20 @@ const testimonials = [
     name: "Sarah T",
     text: "Absolutely brilliant service! Had a burst pipe emergency at midnight and they were here within the hour. Professional, friendly, and fixed everything perfectly. Can't recommend them enough!",
     timeAgo: "3 weeks ago",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+    avatarType: "letter" as const,
+    letter: "E",
   },
   {
     name: "Michael R",
     text: "Used them for a complete bathroom refit and the results are stunning. The team was punctual, tidy, and really knew their stuff. Fair pricing too. Will definitely use again for future work.",
     timeAgo: "1 month ago",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    avatarType: "truck" as const,
   },
   {
     name: "Emma K",
     text: "Called them for a blocked drain that other companies couldn't fix. They diagnosed the problem quickly and had it sorted within hours. Transparent pricing with no hidden fees. Highly recommend!",
     timeAgo: "6 weeks ago",
+    avatarType: "image" as const,
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
   },
 ];
@@ -66,9 +68,23 @@ const TestimonialsSection = () => {
               {/* Header with Avatar, Name, Time, and Google Icon */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                    <Truck className="w-6 h-6 text-primary-foreground" />
-                  </div>
+                  {testimonial.avatarType === "letter" && (
+                    <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
+                      <span className="text-xl font-bold text-white">{testimonial.letter}</span>
+                    </div>
+                  )}
+                  {testimonial.avatarType === "truck" && (
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                      <Truck className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                  )}
+                  {testimonial.avatarType === "image" && (
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                  )}
                   <div>
                     <h3 className="font-bold text-foreground">{testimonial.name}</h3>
                     <p className="text-sm text-muted-foreground">{testimonial.timeAgo}</p>
