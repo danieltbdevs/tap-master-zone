@@ -2,22 +2,22 @@ import { Star, BadgeCheck } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Renee M",
-    text: "I had an awesome experience with this plumbing service. They showed up on time, were super professional, and fixed my leaky tap quickly. I'd definitely recommend them for any home plumbing needs.",
-    timeAgo: "2 months ago",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+    name: "Sarah T",
+    text: "Absolutely brilliant service! Had a burst pipe emergency at midnight and they were here within the hour. Professional, friendly, and fixed everything perfectly. Can't recommend them enough!",
+    timeAgo: "3 weeks ago",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "Destiny C",
-    text: "Our office needed urgent plumbing repairs, and this company came through. They arrived fast, worked efficiently, and didn't disrupt our workday. Excellent service. Thanks Fast Response team!",
-    timeAgo: "5 months ago",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+    name: "Michael R",
+    text: "Used them for a complete bathroom refit and the results are stunning. The team was punctual, tidy, and really knew their stuff. Fair pricing too. Will definitely use again for future work.",
+    timeAgo: "1 month ago",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "Alan D",
-    text: "We had a major plumbing issue at our factory, and these guys were fantastic. Their team is skilled and got everything running smoothly again in no time. Top-notch industrial plumbing service.",
-    timeAgo: "8 months ago",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    name: "Emma K",
+    text: "Called them for a blocked drain that other companies couldn't fix. They diagnosed the problem quickly and had it sorted within hours. Transparent pricing with no hidden fees. Highly recommend!",
+    timeAgo: "6 weeks ago",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
   },
 ];
 
