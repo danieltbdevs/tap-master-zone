@@ -36,7 +36,7 @@ const AboutSection = () => {
             </p>
 
             <Button variant="emergency" size="lg" className="w-full sm:w-auto gap-2 min-h-[48px] text-sm sm:text-base px-4 sm:px-6" asChild>
-              <a href="tel:+441234567890">
+              <a href="https://wa.me/233240786039" target="_blank" rel="noopener noreferrer">
                 <Phone className="h-5 w-5 flex-shrink-0" />
                 <span className="font-bold hidden sm:inline">PLEASE CALL US FOR EMERGENCY SERVICE</span>
                 <span className="font-bold sm:hidden">CALL FOR EMERGENCY</span>
