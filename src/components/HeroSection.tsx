@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Star, Shield, Clock, BadgeCheck } from "lucide-react";
+import { Phone, Star, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import plumberHero from "@/assets/plumber-hero-action.png";
 const HeroSection = () => {
@@ -40,9 +40,8 @@ const HeroSection = () => {
                   Call Now – 24/7
                 </a>
               </Button>
-              <Button className="bg-[#1F2937] hover:bg-[#374151] text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px]" asChild>
+              <Button className="border-2 border-gray-700 bg-transparent hover:bg-gray-800/50 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto min-h-[48px]" asChild>
                 <a href="#callback-form">
-                  <MessageCircle className="w-5 h-5 mr-2" />
                   Request Callback
                 </a>
               </Button>
@@ -51,7 +50,7 @@ const HeroSection = () => {
             {/* Social Proof Row */}
             <div className="flex items-center gap-3 sm:gap-4 pt-2">
               <div className="flex -space-x-2">
-                {[...Array(4)].map((_, i) => <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 border-2 border-[#0B0C10] flex items-center justify-center">
+              {[...Array(4)].map((_, i) => <div key={i} className="w-10 h-10 rounded-full bg-emergency-red border-2 border-[#0B0C10] flex items-center justify-center">
                     <span className="text-xs text-white font-semibold">{['JD', 'MK', 'RS', 'AL'][i]}</span>
                   </div>)}
               </div>
@@ -64,27 +63,35 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Tag Badges - 44px touch targets */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
-              <div className="flex items-center gap-2 bg-[#1F2937] rounded-full px-4 py-2.5 min-h-[44px]">
-                <Shield className="w-4 h-4 text-emergency-red" />
+            {/* Trust badges - simple text with checkmarks */}
+            <div className="flex flex-wrap gap-6 sm:gap-8 pt-4">
+              <div className="flex items-center gap-2">
+                <BadgeCheck className="w-5 h-5 text-emergency-red" />
                 <span className="text-sm text-white">Gas Safe Registered</span>
               </div>
-              <div className="flex items-center gap-2 bg-[#1F2937] rounded-full px-4 py-2.5 min-h-[44px]">
-                <BadgeCheck className="w-4 h-4 text-emergency-red" />
+              <div className="flex items-center gap-2">
+                <BadgeCheck className="w-5 h-5 text-emergency-red" />
                 <span className="text-sm text-white">Fully Insured</span>
               </div>
-              <div className="flex items-center gap-2 bg-[#1F2937] rounded-full px-4 py-2.5 min-h-[44px]">
-                <Clock className="w-4 h-4 text-emergency-red" />
+              <div className="flex items-center gap-2">
+                <BadgeCheck className="w-5 h-5 text-emergency-red" />
                 <span className="text-sm text-white">Same-Day Response</span>
               </div>
             </div>
           </div>
 
-          {/* Right Image - responsive aspect ratio instead of fixed height */}
+          {/* Right Image - with decorative red glow */}
           <div className="order-2 lg:order-2">
-            <div className="relative">
-              
+            <div className="relative mt-8 lg:mt-0">
+              {/* Red glow effect on left side of image */}
+              <div className="absolute -left-8 top-1/4 bottom-1/4 w-24 bg-gradient-to-r from-emergency-red/40 to-transparent blur-3xl" />
+              <div className="relative z-10">
+                <img 
+                  src={plumberHero} 
+                  alt="Professional Plumber" 
+                  className="w-full max-w-lg mx-auto lg:max-w-none rounded-2xl object-cover" 
+                />
+              </div>
             </div>
           </div>
         </div>
